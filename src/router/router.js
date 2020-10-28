@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import top from '@/components/top'
-import about from '@/components/about'
-import event from '@/components/event'
-import trace from '@/components/trace'
+import top from '@/views/top'
+import about from '@/views/about'
+import event from '@/views/event'
+import logs from '@/views/logs'
 
 Vue.use(Router)
 
@@ -26,9 +26,9 @@ export default new Router({
       component: event
     },
     {
-      path: '/trace',
-      name: 'trace',
-      component: trace
+      path: '/logs',
+      name: 'logs',
+      component: logs
     }
   ]
 })

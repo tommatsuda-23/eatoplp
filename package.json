@@ -1,7 +1,7 @@
 {
-  "name": "eatop_lp",
+  "name": "eatoplp",
   "version": "1.0.0",
-  "description": "Vue.js project",
+  "description": "vue.js projet",
   "author": "you5805",
   "private": true,
   "scripts": {
@@ -11,8 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

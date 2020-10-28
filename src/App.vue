@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <nav>
-      <router-link to="/" class="link">TOP PAGE</router-link>
-      <router-link to="/about" class="link">Eatopとは</router-link>
-      <router-link to="/event" class="link">イベント</router-link>
-      <router-link to="/trace" class="link">活動実績</router-link>
-    </nav>
-    <hr>
-    <h2>This page is...</h2>
+    <header>
+      <div id="header-left">
+        <router-link to="/" class="link"><img src="@/assets/images/EATOP.png" alt="いーとっぷ"></router-link>
+      </div>
+      <nav>
+        <router-link to="/about" class="link">Eatopとは</router-link>
+        <router-link to="/event" class="link">イベント情報</router-link>
+        <router-link to="/logs" class="link">活動実績</router-link>
+      </nav>
+    </header>
     <router-view/>
   </div>
 </template>
@@ -24,27 +25,43 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #fff5f1;
+  padding: 0;
+  margin: 0;
+  width: 1440px;
+  height: 5000px;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  height: 100px;
+  width: 1440px;
+  background-color: #fff5f1;
+}
+
+#header-left {
+  float: left;
+  padding-top: 15px;
 }
 
 nav {
   display: flex;
-  justify-content:  center;
+  justify-content:  flex-end;
   align-items: center;
-  margin: 40px 0;
+  padding-top: 1rem;
 }
 
 .link {
   text-decoration: none;
-  display: block;
-  float: left;
+  font-family: 'Nasu';
+  display: inline-block;
   margin: 0 15px;
   padding: 15px 40px;
-  color: #2c3e50;
+  color: black;
   font-size: 20px;
-  background-color: #41B883;
-  border-radius: 4px;
 }
+
 </style>
+
+@import "@/assets/css/style.css"

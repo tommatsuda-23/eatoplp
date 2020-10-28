@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'top',
+  name: 'logs',
   data: function () {
     return {
-      title: 'TOP PAGE'
+      title: '活動実績'
     }
   }
 }
