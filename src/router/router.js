@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import top from '@/views/top'
 import about from '@/views/about'
 import event from '@/views/event'

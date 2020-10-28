@@ -63,5 +63,3 @@ nav {
 }
 
 </style>
-
-@import "@/assets/css/style.css"
