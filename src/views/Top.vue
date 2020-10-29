@@ -9,18 +9,20 @@
             <h2 id="desc">「まち」の食育プロジェクト<br>EATOP</h2>
         </div>
     </div>
-    <section id="about">
-      <h2>「食」というコミュニケーションを軸とした<br>「まち」対象の食育プロジェクト</h2>
-      <button @click="toAbout" class="btn">もっと詳しく</button>
-    </section>
-    <section id="event">
-      <h2>今後のイベント情報</h2>
-      <button @click="toEvent" class="btn">もっと詳しく</button>
-    </section>
-    <section id="logs">
-      <h2>活動実績</h2>
-      <button @click="toEvent" class="btn">もっと詳しく</button>
-    </section>
+    <div id="contents-container">
+      <section id="about">
+        <h2>「食」というコミュニケーションを軸とした<br>「まち」対象の食育プロジェクト</h2>
+        <button @click="toAbout" class="btn">もっと詳しく</button>
+      </section>
+      <section id="event">
+        <h2>今後のイベント情報</h2>
+        <button @click="toEvent" class="btn">もっと詳しく</button>
+      </section>
+      <section id="logs">
+        <h2>活動実績</h2>
+        <button @click="toEvent" class="btn">もっと詳しく</button>
+      </section>
+    </div>
 
   </div>
 </template>
@@ -49,7 +51,9 @@ export default {
 
 <style scoped>
 * {
+  font-family: 'Nasu';
   text-align: center;
+  margin: 0;
 }
 
 .btn {
@@ -83,10 +87,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-#icon {
-    object-fit: contain;
 }
 
 #copy {

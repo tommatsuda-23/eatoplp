@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <header>
-      <router-link to="/"><img src="@/assets/images/EATOP.png" alt="いーとっぷ" id="logo"></router-link>
+      <router-link to="/" id="logo"><img src="@/assets/images/EATOP.png" alt="いーとっぷ"></router-link>
       <nav>
-        <router-link to="/about" class="link">Eatopとは</router-link>
+        <router-link to="/about" class="link">EATOPとは</router-link>
         <router-link to="/event" class="link">イベント情報</router-link>
         <router-link to="/logs" class="link">活動実績</router-link>
         <a href="https://lin.ee/1QVJQLx"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" id="line"></a>
@@ -25,7 +25,6 @@ body {
   background-color: #fff5f1;
   margin: 0;
   width: 100%;
-  height: 100%;
 }
 
 header {
@@ -46,11 +45,13 @@ header {
 }
 
 nav {
-  float: right;
+  display: flex;
+  justify-content: space-between;
 }
 
 #line {
   height: 30px;
+  margin-top: 13px;
 }
 
 </style>
