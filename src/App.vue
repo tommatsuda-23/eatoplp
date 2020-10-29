@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <header>
-      <div id="header-left">
-        <router-link to="/" class="link"><img src="@/assets/images/EATOP.png" alt="いーとっぷ"></router-link>
-      </div>
+      <router-link to="/"><img src="@/assets/images/EATOP.png" alt="いーとっぷ" id="logo"></router-link>
       <nav>
         <router-link to="/about" class="link">Eatopとは</router-link>
         <router-link to="/event" class="link">イベント情報</router-link>
         <router-link to="/logs" class="link">活動実績</router-link>
+        <a href="https://lin.ee/1QVJQLx"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" id="line"></a>
       </nav>
     </header>
     <router-view/>
@@ -20,46 +19,38 @@ export default {
 }
 </script>
 
-<style scoped>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style>
+body {
+  font-family: 'Nasu';
   background-color: #fff5f1;
-  padding: 0;
   margin: 0;
-  width: 1440px;
-  height: 5000px;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-  position: fixed;
-  z-index: 1;
-  height: 100px;
-  width: 1440px;
-  background-color: #fff5f1;
-}
-
-#header-left {
-  float: left;
-  padding-top: 15px;
-}
-
-nav {
   display: flex;
-  justify-content:  flex-end;
-  align-items: center;
-  padding-top: 1rem;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#logo {
+  margin: auto 0;
 }
 
 .link {
   text-decoration: none;
-  font-family: 'Nasu';
-  display: inline-block;
-  margin: 0 15px;
-  padding: 15px 40px;
   color: black;
-  font-size: 20px;
+  padding: 15px;
+  display: inline-block;
+}
+
+nav {
+  float: right;
+}
+
+#line {
+  height: 30px;
 }
 
 </style>
