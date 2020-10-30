@@ -86,25 +86,8 @@ export default {
     color:  rgba(0, 0, 0, 0.692);
 }
 
-.btn {
-  background-color: #987284;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 251px;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 20px;
-  color: white;
-}
-
-section {
+topAbout topEvent topLogs {
   height: 790px;
-}
-
-.container h2 {
-  font-size: 30px;
-  line-height: 2em;
 }
 
 @media (min-width: 1400px) {
