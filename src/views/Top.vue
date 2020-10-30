@@ -27,17 +27,6 @@ export default {
       title: 'TOP PAGE'
     }
   },
-  methods: {
-    toAbout () {
-      this.$router.push('about')
-    },
-    toEvent () {
-      this.$router.push('event')
-    },
-    toLogs () {
-      this.$router.push('logs')
-    }
-  },
   components: {
     topAbout: topAbout,
     topEvent: topEvent,

@@ -9,11 +9,16 @@
 
 <script>
 export default {
-  name: 'topabout',
+  name: 'topAbout',
   data () {
     return {
       tx1: '「食」というコミュニケーションを軸とした',
       tx2: '「まち」対象の食育プロジェクト'
+    }
+  },
+  methods: {
+    toAbout () {
+      this.$route.push('about')
     }
   }
 }

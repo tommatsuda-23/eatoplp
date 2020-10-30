@@ -1,16 +1,21 @@
 <template>
   <section id="logs">
     <div class="container">
-      <button @click="toAbout" class="btn">もっと詳しく</button>
+      <button @click="toLogs" class="btn">もっと詳しく</button>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'topabout',
+  name: 'topLogs',
   data () {
     return {
+    }
+  },
+  methods: {
+    toLogs () {
+      this.$route.push('logs')
     }
   }
 }
