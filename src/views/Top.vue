@@ -1,33 +1,25 @@
 <template>
   <div>
     <div id="mv">
-        <div id="mv-content">
-            <div id="icon">
-                <img src="../assets/images/icon.png" alt="アイコン">
-            </div>
-            <img src="../assets/images/copy.png" alt="食べるという、コミュニケーション" id="copy">
-            <h2 id="desc">「まち」の食育プロジェクト<br>EATOP</h2>
+      <div id="mv-content">
+        <div id="icon">
+          <img src="../assets/images/icon.png" alt="アイコン">
         </div>
+        <img src="../assets/images/copy.png" alt="食べるという、コミュニケーション" id="copy">
+        <h2 id="desc">「まち」の食育プロジェクト<br>EATOP</h2>
+      </div>
     </div>
     <div id="contents-container">
-      <section id="about">
-        <h2>「食」というコミュニケーションを軸とした<br>「まち」対象の食育プロジェクト</h2>
-        <button @click="toAbout" class="btn">もっと詳しく</button>
-      </section>
-      <section id="event">
-        <h2>今後のイベント情報</h2>
-        <button @click="toEvent" class="btn">もっと詳しく</button>
-      </section>
-      <section id="logs">
-        <h2>活動実績</h2>
-        <button @click="toEvent" class="btn">もっと詳しく</button>
-      </section>
+      <topAbout/>
     </div>
-
   </div>
 </template>
 
 <script>
+import topAbout from '@/components/topAbout'
+import topEvent from '@/components/topEvent'
+import topLogs from '@/components/topLogs'
+
 export default {
   name: 'top',
   data () {
@@ -42,9 +34,14 @@ export default {
     toEvent () {
       this.$router.push('event')
     },
-    toTrace () {
-      this.$router.push('trace')
+    toLogs () {
+      this.$router.push('logs')
     }
+  },
+  components: {
+    topAbout: topAbout,
+    topEvent: topEvent,
+    topLogs: topLogs
   }
 }
 </script>
@@ -52,20 +49,9 @@ export default {
 <style scoped>
 * {
   font-family: 'Nasu';
+  font-weight: normal;
   text-align: center;
   margin: 0;
-}
-
-.btn {
-  background-color: #987284;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 251px;
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 20px;
-  color: white;
 }
 
 #mv {
@@ -96,10 +82,29 @@ export default {
 
 #desc {
     font-weight: normal;
+    margin: 20px 0;
+    color:  rgba(0, 0, 0, 0.692);
 }
 
-@media (max-width: 1200px) {
+.btn {
+  background-color: #987284;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 251px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
 
+section {
+  height: 790px;
+}
+
+.container h2 {
+  font-size: 30px;
+  line-height: 2em;
 }
 
 @media (min-width: 1400px) {

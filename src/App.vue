@@ -10,6 +10,9 @@
       </nav>
     </header>
     <router-view/>
+    <footer>
+      <div id="footer-wrapper"></div>
+    </footer>
   </div>
 </template>
 
@@ -52,6 +55,11 @@ nav {
 #line {
   height: 30px;
   margin-top: 13px;
+}
+
+footer {
+  width: 100%;
+  height: 350px;
 }
 
 </style>
