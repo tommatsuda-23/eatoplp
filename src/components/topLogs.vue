@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     toLogs () {
-      this.$route.push('logs')
+      this.$router.push('logs')
     }
   }
 }

@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     toEvent () {
-      this.$route.push('event')
+      this.$router.push('event')
     }
   }
 }

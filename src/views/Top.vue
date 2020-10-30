@@ -11,6 +11,8 @@
     </div>
     <div id="contents-container">
       <topAbout/>
+      <topEvent/>
+      <topLogs/>
     </div>
   </div>
 </template>
@@ -22,11 +24,6 @@ import topLogs from '@/components/topLogs'
 
 export default {
   name: 'top',
-  data () {
-    return {
-      title: 'TOP PAGE'
-    }
-  },
   components: {
     topAbout: topAbout,
     topEvent: topEvent,
@@ -62,6 +59,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+#icon img {
+  height: 130px;
 }
 
 #copy {

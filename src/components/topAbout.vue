@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     toAbout () {
-      this.$route.push('about')
+      this.$router.push('about')
     }
   }
 }
