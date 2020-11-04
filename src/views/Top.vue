@@ -47,18 +47,19 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  box-shadow: inset 0 0 5px 5px #fff5f1;
 }
 
 #mv-content {
-    background-color: #fff5f281;
-    height: 100%;
-    width: 60%;
-    min-width: 300px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  background: linear-gradient(90deg, rgba(255, 245, 242, 0) 0%, rgba(255, 245, 242, 0.5) 15%, rgba(255, 245, 242, 0.8) 40%, rgba(255, 245, 242, 0.8) 60%, rgba(255, 245, 242, 0.5) 75%, rgba(255, 245, 242, 0) 100%);
+  height: 100%;
+  width: 75%;
+  min-width: 300px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #icon img {
@@ -74,10 +75,6 @@ export default {
     font-weight: normal;
     margin: 20px 0;
     color:  rgba(0, 0, 0, 0.692);
-}
-
-topAbout topEvent topLogs {
-  height: 790px;
 }
 
 @media (min-width: 1400px) {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <router-link to="/" id="logo"><img src="@/assets/images/EATOP.png" alt="いーとっぷ"></router-link>
+      <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
       <nav>
         <router-link to="/about" class="link">EATOPとは</router-link>
         <router-link to="/event" class="link">イベント情報</router-link>
