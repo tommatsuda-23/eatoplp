@@ -30,7 +30,7 @@ export default {
 }
 
 .btn {
-  background-color: #987284;
+  background-color: #ffc165;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: 251px;
   height: 50px;
