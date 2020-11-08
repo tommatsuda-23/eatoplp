@@ -1,6 +1,6 @@
 # eatop_lp
 
-> Vue.js project
+> Vue.js project for the landing page of EATOP
 
 ## Build Setup
 
