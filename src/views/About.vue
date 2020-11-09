@@ -9,7 +9,7 @@ export default {
   name: 'about',
   data: function () {
     return {
-      title: 'Eatopとは'
+      title: 'EATOPとは'
     }
   }
 }

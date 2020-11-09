@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template name="fade">
+    <transition name="fade" appear>
       <div id="mv">
         <div id="mv-content">
           <div id="icon">
@@ -10,7 +10,7 @@
           <h2 id="desc">「まち」の食育プロジェクト<br>EATOP</h2>
         </div>
       </div>
-    </template>
+    </transition>
     <div id="contents-container">
       <section id="about">
         <div class="container">
@@ -55,6 +55,14 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 * {
   font-family: 'Nasu';
   font-weight: normal;
