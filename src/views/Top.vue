@@ -71,6 +71,7 @@ export default {
 }
 
 #mv {
+  margin-top: 83px;
   height: 500px;
   text-align: center;
   background-image: url(../assets/images/mv.png);
@@ -81,9 +82,9 @@ export default {
 }
 
 #mv-content {
-  background: linear-gradient(90deg, rgba(255, 245, 242, 0) 0%, rgba(255, 245, 242, 0.5) 15%, rgba(255, 245, 242, 0.8) 40%, rgba(255, 245, 242, 0.8) 60%, rgba(255, 245, 242, 0.5) 75%, rgba(255, 245, 242, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 245, 242, 0) 0%, rgba(255, 245, 242, 0.5) 15%, rgba(255, 245, 242, 0.8) 30%, rgba(255, 245, 242, 0.8) 70%, rgba(255, 245, 242, 0.5) 75%, rgba(255, 245, 242, 0) 100%);
   height: 100%;
-  width: 75%;
+  width: 85%;
   min-width: 300px;
   max-width: 800px;
   margin: 0 auto;

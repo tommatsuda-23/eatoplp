@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <div class="back"/>
-    <header>
-      <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
-      <nav>
-        <router-link to="/about" class="link">EATOPとは</router-link>
-        <router-link to="/event" class="link">イベント情報</router-link>
-        <router-link to="/logs" class="link">活動実績</router-link>
-        <a href="https://lin.ee/1QVJQLx"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" id="line"></a>
-      </nav>
-    </header>
+    <div class="header-wrapper">
+      <header>
+        <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
+        <nav>
+          <router-link to="/about" class="link">EATOPとは</router-link>
+          <router-link to="/event" class="link">イベント情報</router-link>
+          <router-link to="/logs" class="link">活動実績</router-link>
+          <a href="https://lin.ee/1QVJQLx"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" id="line"></a>
+        </nav>
+      </header>
+    </div>
     <router-view/>
     <footer>
       <div id="footer-wrapper"></div>
@@ -35,16 +36,18 @@ body {
   height: 80px;
 }
 
-header {
+.header-wrapper {
   position: fixed;
   top: 0;
-  width: 96%;
+  width: 100%;
+}
+
+header {
   height: 45px;
-  z-index: 1;
   display: flex;
-  justify-content: space-between;
   padding: 20px;
-  background-color: #fff5f1;
+  justify-content: space-between;
+  background: linear-gradient(rgba(255,245,241,1) 0%, rgba(255,245,241,1) 95%, rgba(255,245,241,0) 100%)
 }
 
 #logo {

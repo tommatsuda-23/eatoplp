@@ -9,8 +9,14 @@ export default {
   name: 'event',
   data: function () {
     return {
-      title: '今後のイベント'
+      title: 'COMING SOON!'
     }
   }
 }
 </script>
+
+<style scoped>
+* {
+  text-align: center;
+}
+</style>
