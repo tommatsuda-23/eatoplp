@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="back"/>
     <header>
       <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
       <nav>
@@ -30,10 +31,20 @@ body {
   width: 100%;
 }
 
+.back {
+  height: 80px;
+}
+
 header {
+  position: fixed;
+  top: 0;
+  width: 96%;
+  height: 45px;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  background-color: #fff5f1;
 }
 
 #logo {
@@ -54,7 +65,7 @@ nav {
 
 #line {
   height: 30px;
-  margin-top: 13px;
+  padding-top: 13px;
 }
 
 footer {
