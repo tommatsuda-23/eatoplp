@@ -24,8 +24,7 @@
               <div class="voice">
                 <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
                 <div class="baloon">
-                  <h3></h3>
-                  <p></p>
+                  <p><br>日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
                 </div>
               </div>
               <div class="voice" id="second">
@@ -96,7 +95,6 @@ export default {
 
 #mv {
   height: 500px;
-  text-align: center;
   background-image: url(../assets/images/mv.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -171,6 +169,16 @@ export default {
   display: flex;
 }
 
+.voice h4 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.voice p {
+  font-size: 17px;
+  text-align: left;
+}
+
 #second {
   flex-direction: row-reverse;
 }
@@ -180,6 +188,15 @@ export default {
   min-width: 400px;
   max-width: 550px;
   background-color: #fff;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+}
+
+.baloon p::before {
+  content: '若者との大事なつながり';
+  text-align: left;
 }
 
 .btn {
@@ -210,5 +227,4 @@ export default {
         height: 180px;
     }
 }
-
 </style>
