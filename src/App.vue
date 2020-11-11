@@ -32,20 +32,17 @@ body {
   width: 100%;
 }
 
-.back {
-  height: 80px;
-}
-
 .header-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  height: 94px;
 }
 
 header {
-  height: 45px;
-  display: flex;
+  position: fixed;
+  z-index: 1;
+  box-sizing: border-box;
   padding: 20px;
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   background: linear-gradient(rgba(255,245,241,1) 0%, rgba(255,245,241,1) 95%, rgba(255,245,241,0) 100%)
 }

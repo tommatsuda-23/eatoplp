@@ -14,11 +14,12 @@
     <div id="contents-container">
       <section id="about">
         <div class="container">
-          <h2>共に作り、共に食べる</h2>
+          <h2 id="about-title">共に作り、共に食べる</h2>
           <div id="description">
             <p>EATOP（いーとっぷ）は、大学生、留学生、地域の方々を対象として、<br>「社会性」「芸術性」「国際性」を重視した食育活動を行っています。
             <br>ここでいう食育は、単なる食事ではありません。
-            <br><span>「共に作り、共に食べる」</span>という形こそ、<br>本来の食育の形です。</p>
+            <br><span>「共に作り、共に食べる」</span>という形こそ、本来の食育の形です。</p>
+            <h2 id="voices-title">参加者の声</h2>
           </div>
           <button @click="toAbout" class="btn">もっと詳しく</button>
         </div>
@@ -71,7 +72,6 @@ export default {
 }
 
 #mv {
-  margin-top: 83px;
   height: 500px;
   text-align: center;
   background-image: url(../assets/images/mv.png);
@@ -112,7 +112,7 @@ export default {
   margin: 50px 30px;
 }
 
-#about h2 {
+#about-title {
   font-size: 30px;
   margin-bottom: 30px;
 }

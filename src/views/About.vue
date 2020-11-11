@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="filter"></div>
     <h1>{{ title }}</h1>
   </div>
 </template>
@@ -9,8 +10,12 @@ export default {
   name: 'about',
   data: function () {
     return {
-      title: 'EATOPとは'
+      title: 'ABOUT'
     }
   }
 }
 </script>
+
+<style scoped>
+
+</style>

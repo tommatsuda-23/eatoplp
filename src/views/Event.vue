@@ -16,7 +16,5 @@ export default {
 </script>
 
 <style scoped>
-* {
-  text-align: center;
-}
+
 </style>
