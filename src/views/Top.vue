@@ -19,7 +19,30 @@
             <p>EATOP（いーとっぷ）は、大学生、留学生、地域の方々を対象として、<br>「社会性」「芸術性」「国際性」を重視した食育活動を行っています。
             <br>ここでいう食育は、単なる食事ではありません。
             <br><span>「共に作り、共に食べる」</span>という形こそ、本来の食育の形です。</p>
-            <h2 id="voices-title">参加者の声</h2>
+            <div class="voices">
+              <h3>参加者の声</h3>
+              <div class="voice">
+                <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="voice" id="second">
+                <img src="../assets/images/participants/student.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="voice">
+                <img src="../assets/images/participants/foreignStudent.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+            </div>
           </div>
           <button @click="toAbout" class="btn">もっと詳しく</button>
         </div>
@@ -121,6 +144,42 @@ export default {
   color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
   line-height: 40px;
+}
+
+#about h3 {
+  margin-top: 45px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#about h3::before {
+  content: "";
+  z-index: -1;
+  left: 0;
+  position: absolute;
+  background: radial-gradient(30% 30% at 50% 50%, #FFCCCC 0%, rgba(255, 204, 204, 0) 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.participantPic {
+  height: 110px;
+}
+
+.voice {
+  display: flex;
+}
+
+#second {
+  flex-direction: row-reverse;
+}
+
+.baloon {
+  display: inline-block;
+  min-width: 400px;
+  max-width: 550px;
+  background-color: #fff;
 }
 
 .btn {
