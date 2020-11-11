@@ -3,7 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/router'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faTwitter, faFacebook, faInstagram)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

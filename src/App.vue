@@ -13,7 +13,11 @@
     </div>
     <router-view/>
     <footer>
-      <div id="footer-wrapper"></div>
+      <div id="footer-wrapper">
+        <font-awesome-icon :icon="['fab', 'twitter']" />
+        <font-awesome-icon :icon="['fab', 'facebook']" />
+        <font-awesome-icon :icon="['fab', 'instagram']" />
+      </div>
     </footer>
   </div>
 </template>
@@ -25,6 +29,10 @@ export default {
 </script>
 
 <style>
+#twitter {
+  background-color: black;
+}
+
 body {
   font-family: 'Nasu';
   background-color: #fff5f1;
