@@ -19,7 +19,29 @@
             <p>EATOP（いーとっぷ）は、大学生、留学生、地域の方々を対象として、<br>「社会性」「芸術性」「国際性」を重視した食育活動を行っています。
             <br>ここでいう食育は、単なる食事ではありません。
             <br><span>「共に作り、共に食べる」</span>という形こそ、本来の食育の形です。</p>
-            <h2 id="voices-title">参加者の声</h2>
+            <div class="voices">
+              <h3>参加者の声</h3>
+              <div class="voice">
+                <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <p><br>日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
+                </div>
+              </div>
+              <div class="voice" id="second">
+                <img src="../assets/images/participants/student.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+              <div class="voice">
+                <img src="../assets/images/participants/foreignStudent.png" alt="参加者" class="participantPic">
+                <div class="baloon">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+            </div>
           </div>
           <button @click="toAbout" class="btn">もっと詳しく</button>
         </div>
@@ -73,7 +95,6 @@ export default {
 
 #mv {
   height: 500px;
-  text-align: center;
   background-image: url(../assets/images/mv.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -123,6 +144,61 @@ export default {
   line-height: 40px;
 }
 
+#about h3 {
+  margin-top: 45px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#about h3::before {
+  content: "";
+  z-index: -1;
+  left: 0;
+  position: absolute;
+  background: radial-gradient(30% 30% at 50% 50%, #FFCCCC 0%, rgba(255, 204, 204, 0) 100%);
+  width: 100%;
+  height: 100%;
+}
+
+.participantPic {
+  height: 110px;
+}
+
+.voice {
+  display: flex;
+}
+
+.voice h4 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.voice p {
+  font-size: 17px;
+  text-align: left;
+}
+
+#second {
+  flex-direction: row-reverse;
+}
+
+.baloon {
+  display: inline-block;
+  min-width: 400px;
+  max-width: 550px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+}
+
+.baloon p::before {
+  content: '若者との大事なつながり';
+  text-align: left;
+}
+
 .btn {
   background-color: #ffc165;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -151,5 +227,4 @@ export default {
         height: 180px;
     }
 }
-
 </style>
