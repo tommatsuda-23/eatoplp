@@ -19,7 +19,7 @@
             <p>EATOP（いーとっぷ）は、大学生、留学生、地域の方々を対象として、<br>「社会性」「芸術性」「国際性」を重視した食育活動を行っています。
             <br>ここでいう食育は、単なる食事ではありません。
             <br><span>「共に作り、共に食べる」</span>という形こそ、本来の食育の形です。</p>
-            <div class="voices">
+            <div id="voices">
               <h3>参加者の声</h3>
               <div class="voice">
                 <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
@@ -124,9 +124,9 @@ export default {
 }
 
 #desc {
-    font-weight: normal;
-    margin: 20px 0;
-    color:  rgba(0, 0, 0, 0.692);
+  font-weight: normal;
+  margin: 20px 0;
+  color:  rgba(0, 0, 0, 0.692);
 }
 
 .container {
@@ -136,6 +136,14 @@ export default {
 #about-title {
   font-size: 30px;
   margin-bottom: 30px;
+}
+
+#about-title::before {
+  content: '「'
+}
+
+#about-title::after {
+  content: '」'
 }
 
 #about #description {
@@ -163,6 +171,14 @@ export default {
 
 .participantPic {
   height: 110px;
+}
+
+#voices {
+  margin: 0 80px;
+}
+
+#voices h3 {
+  margin-bottom: 50px;
 }
 
 .voice {
