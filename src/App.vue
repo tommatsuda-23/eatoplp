@@ -92,4 +92,14 @@ footer {
 .fade-leave-active {
   transition: opacity .2s;
 }
+
+@media (max-width: 650px) {
+  #app {
+    display: none;
+  }
+  body::after {
+    content: '申し訳ありませんが、現在モバイル表示には対応しておりません。2021年1月を目処に対応いたしますので、もうしばらくお待ち下さい。';
+    margin: 50px;
+  }
+}
 </style>

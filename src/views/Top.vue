@@ -123,8 +123,8 @@ body {
 }
 
 #copy {
-    object-fit: contain;
-    height: 120px;
+  object-fit: contain;
+  height: 120px;
 }
 
 #desc {
@@ -141,7 +141,7 @@ body {
 #about-title {
   font-size: 30px;
   margin-bottom: 30px;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
 }
 
 #about-title::before {
