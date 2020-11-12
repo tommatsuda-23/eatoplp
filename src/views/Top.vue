@@ -23,21 +23,21 @@
               <h3>参加者の声</h3>
               <div class="voice">
                 <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
-                <div class="baloon">
+                <div class="balloon">
                   <h4>若者との大事なつながり</h4>
                   <p>日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
                 </div>
               </div>
               <div class="voice" id="second">
                 <img src="../assets/images/participants/student.png" alt="参加者" class="participantPic">
-                <div class="baloon">
+                <div class="balloon">
                   <h4></h4>
                   <p></p>
                 </div>
               </div>
               <div class="voice">
                 <img src="../assets/images/participants/foreignStudent.png" alt="参加者" class="participantPic">
-                <div class="baloon">
+                <div class="balloon">
                   <h4></h4>
                   <p></p>
                 </div>
@@ -62,6 +62,8 @@
 </template>
 
 <script>
+import Balloon from '@/components/Balloon'
+
 export default {
   name: 'top',
   methods: {
@@ -191,6 +193,7 @@ export default {
 .voice h4 {
   font-weight: bold;
   text-align: left;
+  font-size: 25px;
 }
 
 .voice p {
@@ -202,7 +205,7 @@ export default {
   flex-direction: row-reverse;
 }
 
-.baloon {
+.balloon {
   display: inline-block;
   min-width: 400px;
   max-width: 550px;

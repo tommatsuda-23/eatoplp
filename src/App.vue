@@ -11,7 +11,7 @@
         </nav>
       </header>
     </div>
-    <transition name="fade" mode="out-in">
+    <transition name="fade" mode="out-in" @before-enter="beforeEnter">
       <router-view/>
     </transition>
     <footer>
@@ -22,7 +22,11 @@
 
 <script>
 export default {
-  name: 'App'
+  methods: {
+    beforeEnter () {
+      this.$root.$emit('triggerScroll')
+    }
+  }
 }
 </script>
 
@@ -35,14 +39,14 @@ body {
 }
 
 .header-wrapper {
-  height: 80px;
+  height: 70px;
 }
 
 header {
   position: fixed;
   z-index: 1;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 12px 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
