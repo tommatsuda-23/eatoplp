@@ -24,20 +24,21 @@
               <div class="voice">
                 <img src="../assets/images/participants/farmer.png" alt="参加者" class="participantPic">
                 <div class="baloon">
-                  <p><br>日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
+                  <h4>若者との大事なつながり</h4>
+                  <p>日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
                 </div>
               </div>
               <div class="voice" id="second">
                 <img src="../assets/images/participants/student.png" alt="参加者" class="participantPic">
                 <div class="baloon">
-                  <h3></h3>
+                  <h4></h4>
                   <p></p>
                 </div>
               </div>
               <div class="voice">
                 <img src="../assets/images/participants/foreignStudent.png" alt="参加者" class="participantPic">
                 <div class="baloon">
-                  <h3></h3>
+                  <h4></h4>
                   <p></p>
                 </div>
               </div>
@@ -78,12 +79,12 @@ export default {
 </script>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1s;
+.fade-enter {
+  opacity: 0;
 }
 
-.fade-enter, .fade-leave-to {
-  opacity: 0;
+.fade-enter-active {
+  transition: opacity .3s;
 }
 
 * {
@@ -136,6 +137,7 @@ export default {
 #about-title {
   font-size: 30px;
   margin-bottom: 30px;
+  letter-spacing: 8px;
 }
 
 #about-title::before {
@@ -179,6 +181,7 @@ export default {
 
 #voices h3 {
   margin-bottom: 50px;
+  letter-spacing: 5px;
 }
 
 .voice {
@@ -208,11 +211,6 @@ export default {
   border-radius: 15px;
   padding: 20px;
   margin: 15px;
-}
-
-.baloon p::before {
-  content: '若者との大事なつながり';
-  text-align: left;
 }
 
 .btn {

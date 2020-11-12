@@ -11,7 +11,9 @@
         </nav>
       </header>
     </div>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
     <footer>
       <div id="footer-wrapper"></div>
     </footer>
@@ -33,7 +35,7 @@ body {
 }
 
 .header-wrapper {
-  height: 94px;
+  height: 80px;
 }
 
 header {
@@ -73,4 +75,13 @@ footer {
   height: 350px;
 }
 
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
 </style>

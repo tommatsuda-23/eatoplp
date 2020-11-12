@@ -10,6 +10,9 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  scrollBehaivor () {
+    return { x: 0, y: 150 }
+  },
   routes: [
     {
       path: '/',
