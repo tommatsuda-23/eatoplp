@@ -41,30 +41,39 @@ export default {
   transform: scale(-1, 1);
 }
 
+.reverse h4,
+.reverse p {
+  transform: scale(-1, 1)
+}
+
 .wrapper {
   position: relative;
   display: inline-block;
-  margin: 1.5em 0 1.5em 15px;
   min-width: 450px;
   max-width: 60%;
-  color: black;
   font-size: 16px;
-  background: #FFF;
   border-radius: 20px;
+  background: linear-gradient(var(--color) 15%, #fff 16%);
 }
 
 .triangle {
+  top: calc(50% - 15px);
   width: 20px;
-  height: 20px;
+  height: 40px;
+  left: -34px;
+  box-sizing: border-box;
   background: transparent;
   position: absolute;
-  border-top: 10px solid transparent;
-  border-right: 10px solid var(--color);
-  border-bottom: 10px solid transparent;
-  z-index: 2;
+  border-top: 20px solid transparent;
+  border-right: 35px solid #fff;
+  border-bottom: 20px solid transparent;
+  z-index: 1;
 }
 
 h4 {
+  border-radius: 20px 20px 0 0;
+  padding: 5px;
+  margin: 0px;
   font-weight: normal;
   text-align: left;
   font-size: 25px;

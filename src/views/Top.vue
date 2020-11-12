@@ -22,7 +22,10 @@
             <div id="voices">
               <h3>参加者の声</h3>
               <div class="voice">
-                <img src="../assets/images/participants/farmer.png" alt="参加者">
+                <div class="participant">
+                  <img src="../assets/images/participants/farmer.png" alt="参加者">
+                  <p></p>
+                </div>
                 <balloon bgColor="#c1e396" title="若者との大事なつながり" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
               </div>
               <div class="voice" id="second">
@@ -168,22 +171,28 @@ export default {
 }
 
 #voices img {
-  height: 110px;
-  margin-right: 50px;
+  height: 125px;
 }
 
 #voices {
   margin: 0 80px;
 }
 
+@media (max-width: 800px) {
+  #voices {
+    margin: 0;
+  }
+}
+
 #voices h3 {
   margin-bottom: 50px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .voice {
   display: flex;
   align-items: center;
+  margin: 20px;
 }
 
 #second {
@@ -192,7 +201,6 @@ export default {
 
 #second:first-child {
   margin-right: 0;
-  margin-left: 50px;
 }
 
 .balloon {

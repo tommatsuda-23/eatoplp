@@ -31,9 +31,13 @@ export default {
 </script>
 
 <style>
+html {
+  background-image: url(./assets/images/background.jpg);
+  background-size: contain;
+}
+
 body {
   font-family: 'Nasu';
-  background-color: #fff5f1;
   margin: 0;
   width: 100%;
 }
@@ -44,7 +48,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   box-sizing: border-box;
   padding: 12px 20px;
   width: 100%;
