@@ -82,7 +82,8 @@ export default {
   opacity: 0;
 }
 
-.fade-enter-active {
+.fade-enter-active,
+.fade-leave-to {
   transition: opacity .3s;
 }
 
@@ -208,19 +209,8 @@ body {
   margin-right: 0;
 }
 
-.balloon {
-  display: inline-block;
-  min-width: 400px;
-  max-width: 550px;
-  background-color: #fff;
-  position: relative;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 15px;
-}
-
 .btn {
-  background-color: #ffc165;
+  background-color: #ffccccce;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0;
   width: 251px;

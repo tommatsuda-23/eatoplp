@@ -57,8 +57,9 @@ export default {
   text-align: left;
   position: relative;
   display: inline-block;
+  margin-bottom: 30px;
   height: 165px;
-  min-width: 450px;
+  min-width: 350px;
   max-width: 60%;
   font-size: 16px;
   border-radius: 20px;
