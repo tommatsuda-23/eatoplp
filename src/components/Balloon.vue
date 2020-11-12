@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div :style="colorStyle" :class="{ reverse: direction}" class="wrapper">
+    <div class="triangle"></div>
     <h4>{{ title }}</h4>
     <p>{{ comment }}</p>
   </div>
@@ -7,51 +8,74 @@
 
 <script>
 export default {
-  name: "balloon",
-  
+  name: 'balloon',
+  props: {
+    title: {
+      required: true,
+      default: ''
+    },
+    comment: {
+      required: true,
+      default: ''
+    },
+    bgColor: {
+      required: true,
+      default: '#555'
+    },
+    direction: {
+      default: false
+    }
+  },
+  computed: {
+    colorStyle () {
+      return {
+        '--color': this.bgColor
+      }
+    }
   }
 }
 </script>
 
 <style scoped>
-div {
+.reverse {
+  transform: scale(-1, 1);
+}
+
+.wrapper {
   position: relative;
   display: inline-block;
   margin: 1.5em 0 1.5em 15px;
-  padding: 7px 10px;
-  min-width: 120px;
-  max-width: 100%;
-  color: #555;
+  min-width: 450px;
+  max-width: 60%;
+  color: black;
   font-size: 16px;
   background: #FFF;
-  border: solid 3px #555;
-  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-.balloon2-left:before {
-  content: "";
+.triangle {
+  width: 20px;
+  height: 20px;
+  background: transparent;
   position: absolute;
-  top: 50%;
-  left: -24px;
-  margin-top: -12px;
-  border: 12px solid transparent;
-  border-right: 12px solid #FFF;
+  border-top: 10px solid transparent;
+  border-right: 10px solid var(--color);
+  border-bottom: 10px solid transparent;
   z-index: 2;
 }
 
-.balloon2-left:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  margin-top: -14px;
-  border: 14px solid transparent;
-  border-right: 14px solid #555;
-  z-index: 1;
+h4 {
+  font-weight: normal;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  background-color: var(--color);
 }
 
-.balloon2-left p {
-  margin: 0;
-  padding: 0;
+p {
+  font-size: 17px;
+  text-align: left;
+  padding: 0 15px;
 }
 </style>
