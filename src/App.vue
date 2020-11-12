@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header-wrapper">
       <header>
-        <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
+        <router-link to="/" id="logo"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ"></router-link>
         <nav>
           <router-link to="/about" class="link">EATOPとは</router-link>
           <router-link to="/event" class="link">イベント情報</router-link>
@@ -32,7 +32,7 @@ export default {
 
 <style>
 html {
-  background-image: url(./assets/images/background.jpg);
+  background-image: url(./assets/images/top/background.jpg);
   background-size: contain;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .header-wrapper {
-  height: 70px;
+  height: 78px;
 }
 
 header {

@@ -4,9 +4,9 @@
       <div id="mv">
         <div id="mv-content">
           <div id="icon">
-            <img src="../assets/images/icon.png" alt="アイコン">
+            <img src="../assets/images/top/icon.png" alt="アイコン">
           </div>
-          <img src="../assets/images/copy.png" alt="食べるという、コミュニケーション" id="copy">
+          <img src="../assets/images/top/copy.png" alt="食べるという、コミュニケーション" id="copy">
           <h2 id="desc">「まち」の食育プロジェクト<br>EATOP</h2>
         </div>
       </div>
@@ -23,18 +23,18 @@
               <h3>参加者の声</h3>
               <div class="voice">
                 <div class="participant">
-                  <img src="../assets/images/participants/farmer.png" alt="参加者">
+                  <img src="../assets/images/top/participants/farmer.png" alt="参加者">
                   <p></p>
                 </div>
-                <balloon bgColor="#c1e396" title="若者との大事なつながり" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+                <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
               </div>
               <div class="voice" id="second">
-                <img src="../assets/images/participants/student.png" alt="参加者">
-                <balloon bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+                <img src="../assets/images/top/participants/student.png" alt="参加者">
+                <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
               </div>
               <div class="voice">
-                <img src="../assets/images/participants/foreignStudent.png" alt="参加者">
-                <balloon bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+                <img src="../assets/images/top/participants/foreignStudent.png" alt="参加者">
+                <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
               </div>
             </div>
           </div>
@@ -89,13 +89,17 @@ export default {
 * {
   font-family: 'Nasu';
   font-weight: normal;
-  text-align: center;
   margin: 0;
 }
 
+body {
+  text-align: center;
+}
+
 #mv {
+  text-align: center;
   height: 500px;
-  background-image: url(../assets/images/mv.png);
+  background-image: url(../assets/images/top/mv.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -130,7 +134,8 @@ export default {
 }
 
 .container {
-  margin: 50px 30px;
+  margin: 50px 0;
+  text-align: center;
 }
 
 #about-title {
@@ -185,7 +190,7 @@ export default {
 }
 
 #voices h3 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   letter-spacing: 3px;
 }
 

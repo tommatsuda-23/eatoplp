@@ -1,7 +1,10 @@
 <template>
   <div :style="colorStyle" :class="{ reverse: direction}" class="wrapper">
     <div class="triangle"></div>
-    <h4>{{ title }}</h4>
+    <div class="flex">
+      <h4>{{ title }}</h4>
+      <p>{{ info }}</p>
+    </div>
     <p>{{ comment }}</p>
   </div>
 </template>
@@ -24,6 +27,10 @@ export default {
     },
     direction: {
       default: false
+    },
+    info: {
+      required: true,
+      default: ''
     }
   },
   computed: {
@@ -47,13 +54,25 @@ export default {
 }
 
 .wrapper {
+  text-align: left;
   position: relative;
   display: inline-block;
+  height: 165px;
   min-width: 450px;
   max-width: 60%;
   font-size: 16px;
   border-radius: 20px;
-  background: linear-gradient(var(--color) 15%, #fff 16%);
+  background: linear-gradient(var(--color) 10%, #fff 16%);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.reverse .flex {
+  flex-direction: row-reverse;
 }
 
 .triangle {
@@ -72,19 +91,32 @@ export default {
 
 h4 {
   border-radius: 20px 20px 0 0;
-  padding: 5px;
+  padding: 10px 20px;
   margin: 0px;
+  height: 40px;
   font-weight: normal;
-  text-align: left;
   font-size: 25px;
   color: white;
-  text-align: center;
   background-color: var(--color);
+}
+
+.flex {
+  background-color: var(--color);
+  border-radius: 20px 20px 0 0;
 }
 
 p {
   font-size: 17px;
-  text-align: left;
+  line-height: 1.5rem;
   padding: 0 15px;
+}
+
+@media (max-width: 1100px) {
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
 }
 </style>
