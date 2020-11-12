@@ -19,23 +19,23 @@
             <p>EATOP（いーとっぷ）は、大学生、留学生、地域の方々を対象として、<br>「社会性」「芸術性」「国際性」を重視した食育活動を行っています。
             <br>ここでいう食育は、単なる食事ではありません。
             <br><span>「共に作り、共に食べる」</span>という形こそ、本来の食育の形です。</p>
-            <div id="voices">
-              <h3>参加者の声</h3>
-              <div class="voice">
-                <div class="participant">
-                  <img src="../assets/images/top/participants/farmer.png" alt="参加者">
-                  <p></p>
-                </div>
-                <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+          </div>
+          <div id="voices">
+            <h3>参加者の声</h3>
+            <div class="voice">
+              <div class="participant">
+                <img src="../assets/images/top/participants/farmer.png" alt="参加者">
+                <p></p>
               </div>
-              <div class="voice" id="second">
-                <img src="../assets/images/top/participants/student.png" alt="参加者">
-                <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
-              </div>
-              <div class="voice">
-                <img src="../assets/images/top/participants/foreignStudent.png" alt="参加者">
-                <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
-              </div>
+              <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+            </div>
+            <div class="voice" id="second">
+              <img src="../assets/images/top/participants/student.png" alt="参加者">
+              <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
+            </div>
+            <div class="voice">
+              <img src="../assets/images/top/participants/foreignStudent.png" alt="参加者">
+              <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment="日本の学生や留学生に、農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。" />
             </div>
           </div>
           <button @click="toAbout" class="btn">もっと詳しく</button>
@@ -192,6 +192,7 @@ body {
 
 #voices h3 {
   margin-bottom: 40px;
+  font-size: 22px;
   letter-spacing: 3px;
 }
 
@@ -210,7 +211,7 @@ body {
 }
 
 .btn {
-  background-color: #ffccccce;
+  background-color: #ffccccb0;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0;
   width: 251px;
@@ -228,7 +229,7 @@ body {
 
 @media (min-width: 1400px) {
     #mv {
-        height: 700px;
+        height: 650px;
     }
     #icon img {
         height: 180px;

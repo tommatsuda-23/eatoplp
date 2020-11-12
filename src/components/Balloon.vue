@@ -92,7 +92,7 @@ export default {
 
 h4 {
   border-radius: 20px 20px 0 0;
-  padding: 10px 20px;
+  padding: 10px 20px 0;
   margin: 0px;
   height: 40px;
   font-weight: normal;
