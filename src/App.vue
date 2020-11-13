@@ -13,7 +13,31 @@
     </div>
     <router-view/>
     <footer>
-      <div id="footer-wrapper"></div>
+      <div id="footer-wrapper">
+        <div id="footer-left">
+          <img id="footer-icon" src="@/assets/images/icon.png" alt="いーとっぷろご">
+        </div>
+        <div id="footer-right">
+          <div id="footer-right-top">
+            <router-link to="/" id="first"><img src="@/assets/images/sample.png" alt="いーとっぷ" id="footer-logo"></router-link>
+            <div id="flexmenu">
+              <font-awesome-icon :icon="['fab', 'twitter']" class="sns-icon" />
+              <font-awesome-icon :icon="['fab', 'facebook']" class="sns-icon" />
+              <font-awesome-icon :icon="['fab', 'instagram']" class="sns-icon" />
+            </div>
+          </div>
+          <div id="footer-right-bottom">
+            <router-link to="" class="link2">コロナ対策について</router-link>
+            <router-link to="" class="link2 footer-link">お問い合わせ</router-link>
+            <router-link to="" class="link2">EN</router-link>
+            <a class="link2">/</a>
+            <router-link to="" class="link2">JP</router-link>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        <a>Copyright © Eatop All rights reserved.</a>
+      </div>
     </footer>
   </div>
 </template>
@@ -25,6 +49,7 @@ export default {
 </script>
 
 <style>
+
 body {
   font-family: 'Nasu';
   background-color: #fff5f1;
@@ -70,7 +95,91 @@ nav {
 
 footer {
   width: 100%;
-  height: 350px;
+}
+
+#footer-wrapper {
+  margin: 100px 100px 0;
+}
+
+#footer-left {
+  float: left;
+  width: 30%;
+}
+
+#footer-icon {
+  height: 200px;
+}
+
+#footer-right {
+  float: right;
+  width: 70%;
+}
+
+#footer-right-top {
+  min-width: 450px;
+  max-width: 90%;
+  height: 100px;
+  border-bottom: solid 1px #555;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 15px 15px;
+}
+
+#first {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+#flexmenu {
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#footer-right-bottom {
+  min-width: 450px;
+  max-width: 90%;
+  height: 100px;
+  padding: 15px 15px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#copyright {
+  width: 100%;
+}
+
+#copyright a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sns-icon {
+  color: #333;
+  font-size: 2em;
+  margin-left: 15px;
+}
+
+.link2 {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+.footer-link {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.link2:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#id {
+  height: 70%;
 }
 
 </style>
