@@ -5,7 +5,7 @@
       <h4>{{ title }}</h4>
       <p>{{ info }}</p>
     </div>
-    <p>{{ comment }}</p>
+    <p v-html="comment"></p>
   </div>
 </template>
 
@@ -60,10 +60,10 @@ export default {
   margin-bottom: 30px;
   height: 165px;
   min-width: 350px;
-  max-width: 60%;
+  max-width: 50%;
   font-size: 16px;
   border-radius: 20px;
-  background: linear-gradient(var(--color) 10%, #fff 16%);
+  background: #fff;
 }
 
 .flex {
@@ -98,11 +98,10 @@ h4 {
   font-weight: normal;
   font-size: 25px;
   color: white;
-  background-color: var(--color);
 }
 
 .flex {
-  background-color: var(--color);
+  background: linear-gradient(var(--color) 0%, var(--color) 90%, #fff 100%);
   border-radius: 20px 20px 0 0;
 }
 
@@ -110,11 +109,21 @@ p {
   font-size: 17px;
   line-height: 1.5rem;
   padding: 0 15px;
+  margin: 5px 10px;
 }
 
 @media (max-width: 1100px) {
   h4 {
     font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 830px) {
+  h4 {
+    font-size: 16px;
   }
   p {
     font-size: 15px;

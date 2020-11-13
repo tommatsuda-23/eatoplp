@@ -17,11 +17,11 @@
     <footer>
       <div id="footer-wrapper">
         <div id="footer-left">
-          <img id="footer-icon" src="@/assets/images/icon.png" alt="いーとっぷろご">
+          <img id="footer-icon" src="@/assets/images/top/icon.png" alt="いーとっぷろご">
         </div>
         <div id="footer-right">
           <div id="footer-right-top">
-            <router-link to="/" id="first"><img src="@/assets/images/sample.png" alt="いーとっぷ" id="footer-logo"></router-link>
+            <router-link to="/" id="first"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="footer-logo"></router-link>
             <div id="flexmenu">
               <font-awesome-icon :icon="['fab', 'twitter']" class="sns-icon" />
               <font-awesome-icon :icon="['fab', 'facebook']" class="sns-icon" />
@@ -191,6 +191,12 @@ footer {
   height: 70%;
 }
 
+@media (max-width: 800px) {
+  #footer-wrapper {
+    margin: 50px 50px;
+  }
+}
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
@@ -205,9 +211,11 @@ footer {
   #app {
     display: none;
   }
+  body {
+    padding: 50px;
+  }
   body::after {
     content: '申し訳ありませんが、現在モバイル表示には対応しておりません。2021年1月を目処に対応いたしますので、もうしばらくお待ち下さい。';
-    margin: 50px;
   }
 }
 </style>
