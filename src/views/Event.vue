@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="wrapper">
     <h1>{{ title }}</h1>
   </div>
 </template>
@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style scoped>
-
+#wrapper {
+  height: 300vh
+}
 </style>

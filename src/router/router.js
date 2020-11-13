@@ -31,5 +31,16 @@ export default new Router({
       name: 'logs',
       component: logs
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    const position = savedPosition || { x: 0, y: 0 }
+    return new Promise((resolve, reject) => {
+      this.app.$root.$once('triggerScroll', () => {
+        this.app.$nextTick(() => {
+          window.scrollTo({ top: position.y, left: position.x })
+          resolve(position)
+        })
+      })
+    })
+  }
 })

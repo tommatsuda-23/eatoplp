@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header-wrapper">
       <header>
-        <router-link to="/" id="logo"><img src="@/assets/images/sample.png" alt="いーとっぷ"></router-link>
+        <router-link to="/" id="logo"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ"></router-link>
         <nav>
           <router-link to="/about" class="link">EATOPとは</router-link>
           <router-link to="/event" class="link">イベント情報</router-link>
@@ -11,7 +11,9 @@
         </nav>
       </header>
     </div>
-    <router-view/>
+    <transition name="fade" mode="out-in" @before-enter="beforeEnter">
+      <router-view/>
+    </transition>
     <footer>
       <div id="footer-wrapper">
         <div id="footer-left">
@@ -44,32 +46,39 @@
 
 <script>
 export default {
-  name: 'App'
+  methods: {
+    beforeEnter () {
+      this.$root.$emit('triggerScroll')
+    }
+  }
 }
 </script>
 
 <style>
+html {
+  background-image: url(./assets/images/top/background.jpg);
+  background-size: contain;
+}
 
 body {
   font-family: 'Nasu';
-  background-color: #fff5f1;
   margin: 0;
   width: 100%;
 }
 
 .header-wrapper {
-  height: 94px;
+  height: 78px;
 }
 
 header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 12px 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(rgba(255,245,241,1) 0%, rgba(255,245,241,1) 95%, rgba(255,245,241,0) 100%)
+  background: linear-gradient(rgba(255,245,241,0.8) 0%, rgba(255,245,241,0.8) 95%, rgba(255,245,241,0) 100%)
 }
 
 #logo {
@@ -182,4 +191,23 @@ footer {
   height: 70%;
 }
 
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
+
+@media (max-width: 650px) {
+  #app {
+    display: none;
+  }
+  body::after {
+    content: '申し訳ありませんが、現在モバイル表示には対応しておりません。2021年1月を目処に対応いたしますので、もうしばらくお待ち下さい。';
+    margin: 50px;
+  }
+}
 </style>
