@@ -23,13 +23,10 @@
           <div id="voices">
             <h3>参加者の声</h3>
             <div class="voice">
-              <div class="participant">
-                <img src="../assets/images/top/participants/farmer.png" alt="参加者">
-                <p></p>
-              </div>
+              <img src="../assets/images/top/participants/farmer.png" alt="参加者">
               <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり" comment='日本の学生や海外からの留学生に農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、<span style="background-color: #fff;">若者との接点</span>もできて、いいことばかりです。'/>
             </div>
-            <div class="voice" id="second">
+            <div class="voice" id="voiceSecond">
               <img src="../assets/images/top/participants/student.png" alt="参加者">
               <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment='大人数でご飯を囲むので、餃子や鍋など、一人暮らしだとなかなか食べることがない料理を食べる機会ができます！なにより、<span class="highlight">みんなで食べるご飯は美味しい！</span>' />
             </div>
@@ -198,11 +195,11 @@ body {
 
 .voice {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 20px;
 }
 
-#second {
+#voiceSecond {
   flex-direction: row-reverse;
 }
 

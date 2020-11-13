@@ -5,7 +5,7 @@
       <h4>{{ title }}</h4>
       <p>{{ info }}</p>
     </div>
-    <p v-html="comment"></p>
+    <p v-html="comment" id="comment"></p>
   </div>
 </template>
 
@@ -57,8 +57,7 @@ export default {
   text-align: left;
   position: relative;
   display: inline-block;
-  margin-bottom: 30px;
-  height: 165px;
+  margin-top: 20px;
   min-width: 350px;
   max-width: 50%;
   font-size: 16px;
@@ -69,7 +68,11 @@ export default {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #fff;
+  background: var(--color);
+  border-radius: 20px 20px 0 0;
+  height: 38px;
 }
 
 .reverse .flex {
@@ -77,39 +80,36 @@ export default {
 }
 
 .triangle {
-  top: calc(50% - 15px);
+  top: 19px;
   width: 20px;
-  height: 40px;
-  left: -34px;
+  height: 19px;
+  left: -20px;
   box-sizing: border-box;
   background: transparent;
   position: absolute;
-  border-top: 20px solid transparent;
-  border-right: 35px solid #fff;
-  border-bottom: 20px solid transparent;
+  border-top: 9.5px solid transparent;
+  border-right: 20px solid var(--color);
+  border-bottom: 9.5px solid transparent;
   z-index: 1;
 }
 
 h4 {
   border-radius: 20px 20px 0 0;
-  padding: 10px 20px 0;
-  margin: 0px;
-  height: 40px;
+  padding-left: 20px;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
-}
-
-.flex {
-  background: linear-gradient(var(--color) 0%, var(--color) 90%, #fff 100%);
-  border-radius: 20px 20px 0 0;
+  margin: 0;
 }
 
 p {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5rem;
+  padding-right: 15px;
+}
+
+#comment {
   padding: 0 15px;
-  margin: 5px 10px;
 }
 
 @media (max-width: 1100px) {
@@ -125,7 +125,7 @@ p {
   h4 {
     font-size: 16px;
   }
-  p {
+  #comment {
     font-size: 15px;
   }
 }
