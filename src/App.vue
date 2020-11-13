@@ -54,7 +54,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(rgba(255,245,241,1) 0%, rgba(255,245,241,1) 95%, rgba(255,245,241,0) 100%)
+  background: linear-gradient(rgba(255,245,241,0.8) 0%, rgba(255,245,241,0.8) 95%, rgba(255,245,241,0) 100%)
 }
 
 #logo {
