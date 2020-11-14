@@ -23,9 +23,9 @@
           <div id="footer-right-top">
             <router-link to="/" id="first"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="footer-logo"></router-link>
             <div id="flexmenu">
-              <font-awesome-icon :icon="['fab', 'twitter']" class="sns-icon" />
-              <font-awesome-icon :icon="['fab', 'facebook']" class="sns-icon" />
-              <font-awesome-icon :icon="['fab', 'instagram']" class="sns-icon" />
+              <a href="https://twitter.com/Eatop_musha"><font-awesome-icon :icon="['fab', 'twitter']" class="sns-icon" /></a>
+              <a href="https://www.facebook.com/mushamusha.eatop"><font-awesome-icon :icon="['fab', 'facebook']" class="sns-icon" /></a>
+              <a href="https://www.instagram.com/mushamushaeatop/"><font-awesome-icon :icon="['fab', 'instagram']" class="sns-icon" /></a>
             </div>
           </div>
           <div id="footer-right-bottom">
