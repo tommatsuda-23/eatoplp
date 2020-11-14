@@ -24,7 +24,7 @@ export default {
     return {
       pinProps: [
         {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 50], imgAlt: '糸島グルメグランプリ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [50, 50], imgAlt: 'ハイホー', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [20, 20], imgAlt: 'ハイホー', link: ''},
         {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [50, 50], imgAlt: '伊万里田植え体験', link: ''},
         {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 50], imgAlt: '九大祭', link: ''},
         {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [50, 80], imgAlt: 'ピエトロ', link: ''},

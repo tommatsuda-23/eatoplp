@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 div img {
-  height: 92px;
+  height: 50px;
   position: absolute;
   z-index: 2;
   top: var(--y);
