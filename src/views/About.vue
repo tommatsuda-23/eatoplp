@@ -1,8 +1,7 @@
 <template>
   <div id="wrapper">
     <transition name="fade">
-      <div id="about-mv">
-      </div>
+      <div id="about-mv"></div>
     </transition>
     <div>
      <br><br>
