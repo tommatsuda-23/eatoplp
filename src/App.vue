@@ -100,6 +100,7 @@ nav {
 #line {
   height: 30px;
   padding-top: 13px;
+  cursor: url(./app/line_brown.png), auto;
 }
 
 footer {
