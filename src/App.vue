@@ -72,7 +72,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   box-sizing: border-box;
   padding: 12px 20px;
   width: 100%;

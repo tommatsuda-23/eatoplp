@@ -1,5 +1,5 @@
 <template>
-  <div :style="colorStyle" :class="{ reverse: direction}" class="wrapper">
+  <div :style="colorStyle" :class="{ reverse: direction }" class="wrapper">
     <div class="triangle"></div>
     <div class="flex">
       <h4>{{ title }}</h4>
