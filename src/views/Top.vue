@@ -218,7 +218,6 @@ body {
   height: 50px;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
   font-size: 20px;
   color: white;
 }
@@ -228,11 +227,11 @@ body {
 }
 
 #cursor-about {
-  cursor: url(../assets/images/top/cursor/about_meat.png);
+  cursor: url(../assets/images/top/cursor/about_meat.png), auto;
 }
 
 #cursor-logs {
-  cursor: url(../assets/images/top/cursor/logs_fish.png);
+  cursor: url(../assets/images/top/cursor/logs_fish.png), auto;
 }
 
 @media (min-width: 1400px) {
