@@ -1,9 +1,11 @@
 <template>
-  <div id="wrapper">
+  <div id="logs">
     <transition name="fade" mode="out-in">
       <div id="map">
-        <template v-for="prop in pinProps">
-          <pin name="prop[name]" position="prop[position]" imgAlt="prop[imgAlt]" />
+        <template v-for="(prop, key) in pinProps">
+          <router-link :key="key" :to="prop['link']">
+            <pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
+          </router-link>
         </template>
       </div>
     </transition>
@@ -21,16 +23,16 @@ export default {
   data () {
     return {
       pinProps: [
-        {name: 'gurugura', position: [50, 50], imgAlt: '糸島グルメグランプリ', link: ''},
-        {name: 'hiho', position: [50, 50], imgAlt: 'ハイホー', link: ''},
-        {name: 'imari', position: [50, 50], imgAlt: '伊万里田植え体験', link: ''},
-        {name: 'kyudaisai', position: [50, 50], imgAlt: '九大祭', link: ''},
-        {name: 'piertro', position: [50, 50], imgAlt: 'ピエトロ', link: ''},
-        {name: 'qshock', position: [50, 50], imgAlt: 'Q-SHOCK', link: ''},
-        {name: 'sabameshi', position: [50, 50], imgAlt: 'サバイバル飯キャンプ', link: ''},
-        {name: 'saito', position: [50, 50], imgAlt: 'さいとぴあバレンタイン', link: ''},
-        {name: 'saitorensai', position: [50, 50], imgAlt: '西都連祭', link: ''},
-        {name: 'tofu', position: [50, 50], imgAlt: 'またいちの塩で豆腐作り', link: ''}
+        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 50], imgAlt: '糸島グルメグランプリ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [50, 50], imgAlt: 'ハイホー', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [50, 50], imgAlt: '伊万里田植え体験', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 50], imgAlt: '九大祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [50, 80], imgAlt: 'ピエトロ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [50, 50], imgAlt: 'Q-SHOCK', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/sabameshi.png'), position: [50, 50], imgAlt: 'サバイバル飯キャンプ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [50, 50], imgAlt: 'さいとぴあバレンタイン', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [50, 50], imgAlt: '西都連祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [50, 50], imgAlt: 'またいちの塩で豆腐作り', link: ''}
       ]
     }
   },
@@ -54,10 +56,6 @@ export default {
   font-family: 'Nasu';
   font-weight: normal;
   margin: 0;
-}
-
-#wrapper {
-  height: 300vh
 }
 
 #map {

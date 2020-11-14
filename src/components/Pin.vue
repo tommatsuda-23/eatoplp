@@ -1,13 +1,13 @@
 <template>
   <div>
-      <img v-bind="{ src: imgSrc, style: coordinate, alt: imgAlt}">
+      <img v-bind="{ src: imgSrc, style: coordinate, alt: imgAlt }">
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    name: {},
+    imgSrc: {},
     position: {
       required: true,
       default: [0, 0]
@@ -20,19 +20,14 @@ export default {
         '--x': this.position[0] + '%',
         '--y': this.position[1] + '%'
       }
-    },
-    imgSrc () {
-      var src = '../assets/images/logs/pins/' + this.name
-      return {
-        src
-      }
     }
   }
 }
 </script>
 
 <style scoped>
-div {
+div img {
+  height: 92px;
   position: absolute;
   z-index: 2;
   top: var(--y);
