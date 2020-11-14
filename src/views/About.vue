@@ -20,7 +20,7 @@
       <div id="tanaka-left">
         <h2>代表</h2>
         <h1>田中  稀ひろ<span> KIHIRO TANAKA</span></h1>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
       </div>
       <div id="tanaka-right">
          <img src="../assets/images/about/tanaka.png" alt="田中 稀ひろ">
@@ -33,7 +33,7 @@
       <div id="sasazu-right">
         <h2>創設者</h2>
         <h1>笹津  敏靖<span> TOSHINOBU SASAZU</span></h1>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
       </div>
      </div>
      <div>
@@ -43,22 +43,24 @@
        <div class="participant">
         <img src="../assets/images/about/participant1.png" alt="地域の方々">
         <h2>地域の方々</h2>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
        </div>
        <div class="participant">
         <img src="../assets/images/about/participant2.png" alt="地域の方々">
         <h2>大学生</h2>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
        </div>
        <div class="participant">
         <img src="../assets/images/about/participant3.png" alt="地域の方々">
         <h2>留学生</h2>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
        </div>
      </div>
-     <div id="partner">
+     <div>
        <h1 id="title">パートナー</h1>
-       <p>Coming Sooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooon!!!!!!!!!!!!!!!!!!!</p>
+     </div>
+     <div id="partner">
+       <p>金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾金吾</p>
      </div>
     </div>
   </div>
@@ -194,5 +196,10 @@ span {
 
 .participant > h2 {
   margin-bottom: 10px;
+}
+
+#partner {
+  display: flex;
+  justify-content: center;
 }
 </style>
