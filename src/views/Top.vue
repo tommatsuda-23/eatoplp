@@ -51,10 +51,21 @@
       </section>
       <section id="logs">
         <div class="container">
-          <button @click="toLogs" class="btn" id="cursor-logs">もっと詳しく</button>
+          <div id="active-map">
+            <h3>EATOP活動マップ</h3>
+            <p>これまでの活動をマップにまとめています</p>
+            <button @click="toLogs" class="btn" id="cursor-logs">もっと詳しく</button>
+          </div>
         </div>
       </section>
+      <div>
+        <Timeline id="Eatop_musha" sourceType="profile"/>
+      </div>
     </div>
+    <li>
+      <div>
+      </div>
+    </li>
   </div>
 </template>
 
@@ -78,6 +89,9 @@ export default {
     balloon
   }
 }
+
+import { Timeline } from 'vue-tweet-embed'
+
 </script>
 
 <style scoped>
@@ -238,6 +252,33 @@ body {
 
 #event {
   display: none;
+}
+
+#logs {
+  display: flex;
+  justify-content: center;
+}
+
+#active-map {
+  height: 500px;
+  width: 932px;
+  background-image: url(../assets/images/top/active_map.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+#active-map > h3 {
+  font-size: 20px;
+}
+
+#active-map > p {
+  font-size: 15px;
 }
 
 #cursor-about {
