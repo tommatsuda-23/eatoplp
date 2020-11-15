@@ -32,5 +32,12 @@ div img {
   z-index: 2;
   top: var(--y);
   left: var(--x);
+  transition: all .5s;
+}
+
+div img:hover {
+  height: 120px;
+  top: calc(var(--y) - 70px);
+  left: calc(var(--x) - 22px)
 }
 </style>

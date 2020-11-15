@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header-wrapper">
       <header>
-        <router-link to="/" id="logo"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ"></router-link>
+        <img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="logo" @click="toTop">
         <nav>
           <router-link to="/about" class="link">EATOPとは</router-link>
           <router-link to="/event" class="link">イベント情報</router-link>
@@ -21,7 +21,7 @@
         </div>
         <div id="footer-right">
           <div id="footer-right-top">
-            <router-link to="/" id="first"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="footer-logo"></router-link>
+            <div id="first" @click="toTop"><img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="footer-logo"></div>
             <div id="flexmenu">
               <a href="https://twitter.com/Eatop_musha"><font-awesome-icon :icon="['fab', 'twitter']" class="sns-icon" /></a>
               <a href="https://www.facebook.com/mushamusha.eatop"><font-awesome-icon :icon="['fab', 'facebook']" class="sns-icon" /></a>
@@ -49,6 +49,13 @@ export default {
   methods: {
     beforeEnter () {
       this.$root.$emit('triggerScroll')
+    },
+    toTop () {
+      if (this.$route.path === '/') {
+        this.$router.go({ name: 'top' })
+      } else {
+        this.$router.push({ name: 'top' })
+      }
     }
   }
 }
@@ -83,6 +90,8 @@ header {
 
 #logo {
   margin: auto 0;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .link {
@@ -138,6 +147,7 @@ footer {
 #first {
   margin-left: 20px;
   margin-right: auto;
+  cursor: pointer;
 }
 
 #flexmenu {
