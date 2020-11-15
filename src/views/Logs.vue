@@ -1,15 +1,21 @@
 <template>
   <div id="logs">
     <transition name="fade" mode="out-in">
-      <div id="map">
-        <template v-for="(prop, key) in pinProps">
-          <router-link :key="key" to="">
-            <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
-          </router-link>
-        </template>
+      <div>
+        <div id="title">
+          <h1>EATOP活動マップ</h1>
+          <p>これまでEATOPが行ってきた活動のうちいくつかを紹介しています</p>
+        </div>
+        <div id="map">
+          <template v-for="(prop, key) in pinProps">
+            <router-link :key="key" to="">
+              <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
+            </router-link>
+          </template>
+        </div>
       </div>
     </transition>
-    <div v-if="path" class="modal">
+    <div class="modal">
       <router-view></router-view>
     </div>
   </div>
@@ -23,30 +29,22 @@ export default {
   data () {
     return {
       pinProps: [
-        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [35, 35], imgAlt: '糸島グルメグランプリ', link: 'gurugura'},
-        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [40, 70], imgAlt: 'ハイホー', link: 'hiho'},
-        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [10, 20], imgAlt: '伊万里田植え体験', link: 'imari'},
-        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [48, 26], imgAlt: '九大祭', link: 'kyudaisai'},
-        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [87, 85], imgAlt: 'ピエトロ', link: 'pietro'},
-        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [20, 50], imgAlt: 'Q-SHOCK', link: 'qshock'},
-        {imgSrc: require('../assets/images/logs/pins/sabameshi.png'), position: [10, 60], imgAlt: 'サバイバル飯キャンプ', link: 'sabameshi'},
-        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [65, 50], imgAlt: 'さいとぴあバレンタイン', link: 'saito'},
-        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [67, 53], imgAlt: '西都連祭', link: 'saitorensai'},
-        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [53, 20], imgAlt: 'またいちの塩で豆腐作り', link: 'tofu'}
+        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 35], imgAlt: '糸島グルメグランプリ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [39, 57], imgAlt: 'ハイホー', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [8, 25], imgAlt: '伊万里田植え体験', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 24], imgAlt: '九大祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [86, 70], imgAlt: 'ピエトロ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [42, 60], imgAlt: 'Q-SHOCK', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/sabameshi.png'), position: [75, 65], imgAlt: 'サバイバル飯キャンプ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [68, 47], imgAlt: 'さいとぴあバレンタイン', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [66, 43], imgAlt: '西都連祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [53, 18], imgAlt: 'またいちの塩で豆腐作り', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/kendo.png'), position: [60, 30], imgAlt: '留学生の剣道体験', link: ''}
       ]
     }
   },
   components: {
     Pin
-  },
-  computed: {
-    path () {
-      if (this.$route.path === '/logs') {
-        return false
-      } else {
-        return true
-      }
-    }
   }
 }
 </script>
@@ -65,6 +63,26 @@ export default {
   font-family: 'Nasu';
   font-weight: normal;
   margin: 0;
+}
+
+#title {
+  text-align: center;
+  padding: 40px 0;
+  margin: 0;
+}
+
+#title > h1 {
+  margin-bottom: 10px;
+}
+
+#title > p {
+  color: rgba(0,0,0,0.8);
+}
+
+#title > h1::before,
+#title > h1::after {
+  content: '～';
+  font-size: 25px;
 }
 
 #map {

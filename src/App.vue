@@ -97,8 +97,12 @@ header {
 .link {
   text-decoration: none;
   color: black;
-  padding: 15px;
+  padding: 20px 15px;
   display: inline-block;
+}
+
+.link:hover {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 190, 190, 0.3) 0%, rgba(255, 190, 190, 0.2) 58%, rgba(255, 190, 190, 0) 100%);
 }
 
 nav {

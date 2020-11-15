@@ -18,7 +18,7 @@ export default {
     coordinate () {
       return {
         '--x': this.position[0] + '%',
-        '--y': this.position[1] * 0.51 + '%'
+        '--y': this.position[1] * 0.53 + '%'
       }
     }
   }
@@ -31,7 +31,7 @@ div img {
   z-index: 2;
   margin-top: var(--y);
   margin-left: var(--x);
-  transition: all .5s;
+  transition: all .4s;
   position: absolute;
 }
 
