@@ -35,7 +35,7 @@
               <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment='イベントの中で日本人と、日本の食文化のことだけでなく、自分の国の料理についても話せる。食文化以外の色々な体験ができるのも嬉しい！' />
             </div>
           </div>
-          <button @click="toAbout" class="btn">もっと詳しく</button>
+          <button @click="toAbout" class="btn" id="cursor-about">もっと詳しく</button>
         </div>
       </section>
       <section id="event">
@@ -45,7 +45,7 @@
       </section>
       <section id="logs">
         <div class="container">
-          <button @click="toLogs" class="btn">もっと詳しく</button>
+          <button @click="toLogs" class="btn" id="cursor-logs">もっと詳しく</button>
         </div>
       </section>
     </div>
@@ -215,13 +215,20 @@ body {
   height: 50px;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
   font-size: 20px;
   color: white;
 }
 
 #event {
   display: none;
+}
+
+#cursor-about {
+  cursor: url(../assets/images/top/cursor/about_meat.png), auto;
+}
+
+#cursor-logs {
+  cursor: url(../assets/images/top/cursor/logs_fish.png), auto;
 }
 
 @media (min-width: 1400px) {
