@@ -17,6 +17,8 @@ export default {
 
 <style scoped>
 #wrapper {
-  height: 300vh
+  height: 80vh;
+  text-align: center;
+  font-family: 'Nasu'
 }
 </style>

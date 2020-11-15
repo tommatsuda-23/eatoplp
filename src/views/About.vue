@@ -66,8 +66,20 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2>パートナー</h2>
+    <h2 id="partners-title">パートナー</h2>
+    <section id="partners">
+      <div class="partner">
+        <img src="" alt="">
+        <p>あああああ</p>
+      </div>
+      <div class="partner">
+        <img src="" alt="">
+        <p>あああああ</p>
+      </div>
+      <div class="partner">
+        <img src="" alt="">
+        <p>あああああ</p>
+      </div>
     </section>
   </div>
 </template>
@@ -185,7 +197,7 @@ span {
 
 #title {
   font-size: 30px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   letter-spacing: 5px;
   text-align: center;
 }
@@ -213,8 +225,13 @@ span {
   margin-bottom: 10px;
 }
 
-#partner {
+#partners-title {
+  text-align: center;
+}
+
+#partners {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 </style>

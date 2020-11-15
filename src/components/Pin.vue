@@ -31,7 +31,7 @@ div img {
   z-index: 2;
   margin-top: var(--y);
   margin-left: var(--x);
-  transition: all .4s;
+  transition: all .2s;
   position: absolute;
 }
 

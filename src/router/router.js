@@ -6,7 +6,7 @@ import about from '@/views/about'
 import event from '@/views/event'
 import logs from '@/views/logs'
 
-import log from '@/components/log'
+import post from '@/components/post'
 
 Vue.use(Router)
 
@@ -31,11 +31,7 @@ export default new Router({
     {
       path: '/logs',
       name: 'logs',
-      component: logs,
-      children: [{
-        path: '/post/:id',
-        component: log
-      }]
+      component: logs
     }
     // ,{
     //   path: '*',

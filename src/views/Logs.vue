@@ -4,25 +4,38 @@
       <div>
         <div id="title">
           <h1>EATOP活動マップ</h1>
-          <p>これまでEATOPが行ってきた活動のうちいくつかを紹介しています</p>
+          <p>これまでEATOPが行ってきた活動のうちいくつかを紹介しています
+          <br>クリックすると、詳しい情報が見られます</p>
         </div>
         <div id="map">
           <template v-for="(prop, key) in pinProps">
-            <router-link :key="key" to="">
+            <div id="show-modal" :key=key @click="showModal = true">
               <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
-            </router-link>
+            </div>
           </template>
         </div>
       </div>
     </transition>
-    <div class="modal">
-      <router-view></router-view>
-    </div>
+    <Post v-if="showModal" @close="showModal = false">[
+      <template v-slot:title>
+        <h2></h2>
+      </template>
+      <template v-slot:contents>
+        <img src="" alt="">
+
+      </template>
+    </Post>
   </div>
 </template>
 
 <script>
 import Pin from '@/components/Pin'
+import Post from '@/components/Post'
+import Vue from 'vue'
+
+Vue.component('modal', {
+  template: '#modal-template'
+})
 
 export default {
   name: 'logs',
@@ -40,11 +53,13 @@ export default {
         {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [66, 43], imgAlt: '西都連祭', link: ''},
         {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [53, 18], imgAlt: 'またいちの塩で豆腐作り', link: ''},
         {imgSrc: require('../assets/images/logs/pins/kendo.png'), position: [60, 30], imgAlt: '留学生の剣道体験', link: ''}
-      ]
+      ],
+      showModal: false
     }
   },
   components: {
-    Pin
+    Pin,
+    Post
   }
 }
 </script>
@@ -65,6 +80,15 @@ export default {
   margin: 0;
 }
 
+#logs {
+  height: 600px;
+}
+@media (min-width: 840px) {
+  #logs {
+    height: 800px;
+  }
+}
+
 #title {
   text-align: center;
   padding: 40px 0;
@@ -83,6 +107,14 @@ export default {
 #title > h1::after {
   content: '～';
   font-size: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#show-modal {
+  cursor: pointer;
 }
 
 #map {
