@@ -3,7 +3,7 @@
     <transition name="fade" mode="out-in">
       <div id="map">
         <template v-for="(prop, key) in pinProps">
-          <router-link :key="key" :to="route">
+          <router-link :key="key" to="">
             <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
           </router-link>
         </template>
