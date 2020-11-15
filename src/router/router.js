@@ -6,6 +6,8 @@ import about from '@/views/about'
 import event from '@/views/event'
 import logs from '@/views/logs'
 
+import log from '@/components/log'
+
 Vue.use(Router)
 
 export default new Router({
@@ -29,7 +31,15 @@ export default new Router({
     {
       path: '/logs',
       name: 'logs',
-      component: logs
+      component: logs,
+      children: [{
+        path: '/:id',
+        component: log
+      }]
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ],
   scrollBehavior (to, from, savedPosition) {

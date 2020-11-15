@@ -18,7 +18,7 @@ export default {
     coordinate () {
       return {
         '--x': this.position[0] + '%',
-        '--y': this.position[1] + '%'
+        '--y': this.position[1] * 0.51 + '%'
       }
     }
   }
@@ -28,16 +28,17 @@ export default {
 <style scoped>
 div img {
   height: 50px;
-  position: absolute;
   z-index: 2;
-  top: var(--y);
-  left: var(--x);
+  margin-top: var(--y);
+  margin-left: var(--x);
   transition: all .5s;
+  position: absolute;
 }
 
 div img:hover {
   height: 120px;
-  top: calc(var(--y) - 70px);
-  left: calc(var(--x) - 22px)
+  margin-top: calc(var(--y) - 70px);
+  margin-left: calc(var(--x) - 22px);
+  z-index: 5;
 }
 </style>
