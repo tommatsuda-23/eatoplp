@@ -10,21 +10,20 @@
         <div id="map">
           <template v-for="(prop, key) in pinProps">
             <div id="show-modal" :key=key @click="showModal = true">
-              <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
+              <Pin :key=key v-bind="{ pinImg: prop['pinImg'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
             </div>
+            <Post :key=key v-if="showModal" @close="showModal = false">
+              <template v-slot:title>
+                <h2></h2>
+              </template>
+              <template v-slot:contents>
+                <img src="" alt="">
+              </template>
+            </Post>
           </template>
         </div>
       </div>
     </transition>
-    <Post v-if="showModal" @close="showModal = false">[
-      <template v-slot:title>
-        <h2></h2>
-      </template>
-      <template v-slot:contents>
-        <img src="" alt="">
-
-      </template>
-    </Post>
   </div>
 </template>
 
@@ -42,17 +41,61 @@ export default {
   data () {
     return {
       pinProps: [
-        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 35], imgAlt: '糸島グルメグランプリ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [39, 57], imgAlt: 'ハイホー', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [8, 25], imgAlt: '伊万里田植え体験', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 24], imgAlt: '九大祭', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [86, 70], imgAlt: 'ピエトロ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [42, 60], imgAlt: 'Q-SHOCK', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/sabameshi.png'), position: [75, 65], imgAlt: 'サバイバル飯キャンプ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [68, 47], imgAlt: 'さいとぴあバレンタイン', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [66, 43], imgAlt: '西都連祭', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [53, 18], imgAlt: 'またいちの塩で豆腐作り', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/kendo.png'), position: [60, 30], imgAlt: '留学生の剣道体験', link: ''}
+        {pinImg: require('../assets/images/logs/pins/gurugura.png'),
+          position: [30, 35],
+          imgAlt: '糸島グルメグランプリ',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/hiho.png'),
+          position: [39, 57],
+          imgAlt: 'ハイホー',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/imari.png'),
+          position: [8, 25],
+          mgAlt: '伊万里田植え体験',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/kyudaisai.png'),
+          position: [50, 24],
+          imgAlt: '九大祭',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/pietro.png'),
+          position: [86, 70],
+          imgAlt: 'ピエトロ',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/qshock.png'),
+          position: [42, 60],
+          imgAlt: 'Q-SHOCK',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/sabameshi.png'),
+          position: [75, 65],
+          imgAlt: 'サバイバル飯キャンプ',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/saito.png'),
+          position: [68, 47],
+          imgAlt: 'さいとぴあバレンタイン',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/saitorensai.png'),
+          position: [66, 43],
+          imgAlt: '西都連祭',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/tofu.png'),
+          position: [53, 18],
+          imgAlt: 'またいちの塩で豆腐作り',
+          color: '#c1e396'
+        },
+        {pinImg: require('../assets/images/logs/pins/kendo.png'),
+          position: [60, 30],
+          imgAlt: '留学生の剣道体験',
+          color: '#c1e396'
+        }
       ],
       showModal: false
     }
@@ -100,7 +143,7 @@ export default {
 }
 
 #title > p {
-  color: rgba(0,0,0,0.8);
+  color: '#c1e396'rgba(0,0,0,0.8);
 }
 
 #title > h1::before,

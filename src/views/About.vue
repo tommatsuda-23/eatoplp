@@ -4,6 +4,7 @@
       <div id="about-mv"></div>
     </transition>
     <section id="introduction">
+      <br><br>
       <h1 id="about-title">共に作り、共に食べる</h1>
       <div id="description">
         <h3>EATOPの目的</h3>
@@ -29,7 +30,9 @@
         <div id="tanaka-left">
           <h2>代表</h2>
           <h1>田中  稀ひろ<span> KIHIRO TANAKA</span></h1>
-          <p>{{ kingo }}</p>
+          <p>2代目代表、共創学部3年
+          <br>アットホームで居心地のいい空間作りのできるEATOPの仲間と活動を誇りに思っています。
+          <br>今年は新型コロナウイルス感染症拡大の影響で、思うように活動ができていない面も多いですが、今後もこの活動を広げていくために代表を務め上げたいです！</p>
         </div>
         <div id="tanaka-right">
           <img src="../assets/images/about/tanaka.png" alt="田中 稀ひろ">
@@ -42,43 +45,40 @@
         <div id="sasazu-right">
           <h2>創設者</h2>
           <h1>笹津  敏靖<span> TOSHINOBU SASAZU</span></h1>
-          <p>{{ kingo }}</p>
+          <p>あああああああああああああ</p>
         </div>
       </div>
     </section>
-    <section>
-      <h1 id="title">参加者の声</h1>
-      <div id="voice">
-        <div class="participant">
-          <img src="../assets/images/about/participant1.png" alt="地域の方々">
-          <h2>地域の方々</h2>
-          <p>{{ kingo }}</p>
-        </div>
-        <div class="participant">
-          <img src="../assets/images/about/participant2.png" alt="地域の方々">
-          <h2>大学生</h2>
-          <p>{{ kingo }}</p>
-        </div>
-        <div class="participant">
-          <img src="../assets/images/about/participant3.png" alt="地域の方々">
-          <h2>留学生</h2>
-          <p>{{ kingo }}</p>
-        </div>
+    <section id="voice">
+      <div class="participant">
+        <img src="../assets/images/about/participant1.png" alt="地域の方々">
+        <h2>地域の方々</h2>
+        <p>日本の学生や海外からの留学生に農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
+      </div>
+      <div class="participant">
+        <img src="../assets/images/about/participant2.png" alt="地域の方々">
+        <h2>大学生</h2>
+        <p>大人数でご飯を囲むので、餃子や鍋など、一人暮らしだとなかなか食べることがない料理を食べる機会ができます！なにより、みんなで食べるご飯は美味しい！</p>
+      </div>
+      <div class="participant">
+        <img src="../assets/images/about/participant3.png" alt="地域の方々">
+        <h2>留学生</h2>
+        <p>イベントの中で日本人と、日本の食文化のことだけでなく、自分の国の料理についても話せる。食文化以外の色々な体験ができるのも嬉しい！</p>
       </div>
     </section>
-    <h2 id="partners-title">パートナー</h2>
+    <h1 id="title">パートナー</h1>
     <section id="partners">
       <div class="partner">
         <img src="" alt="">
-        <p>あああああ</p>
+        <p>COMING SOON!!</p>
       </div>
       <div class="partner">
         <img src="" alt="">
-        <p>あああああ</p>
+        <p>COMING SOON!!</p>
       </div>
       <div class="partner">
         <img src="" alt="">
-        <p>あああああ</p>
+        <p>COMING SOON!!</p>
       </div>
     </section>
   </div>
@@ -86,12 +86,7 @@
 
 <script>
 export default {
-  name: 'about',
-  data () {
-    return {
-      kingo: 'ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ'
-    }
-  }
+  name: 'about'
 }
 </script>
 
@@ -172,6 +167,10 @@ body {
   width: 50%;
 }
 
+#tanaka-left > p {
+  font-size: 15px;
+}
+
 #tanaka-right > img {
   width: 100%;
 }
@@ -189,6 +188,10 @@ body {
 
 #sasazu-right {
   width: 50%;
+}
+
+#sasazu-right > p {
+  font-size: 15px;
 }
 
 span {
@@ -225,13 +228,16 @@ span {
   margin-bottom: 10px;
 }
 
-#partners-title {
+.participant > p {
+  font-size: 15px;
   text-align: center;
 }
 
 #partners {
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 </style>

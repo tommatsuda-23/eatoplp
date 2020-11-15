@@ -4,9 +4,9 @@
       <header>
         <img src="@/assets/images/top/eatop.png" alt="いーとっぷ" id="logo" @click="toTop">
         <nav>
-          <router-link to="/about" class="link">EATOPとは</router-link>
-          <router-link to="/event" class="link">イベント情報</router-link>
-          <router-link to="/logs" class="link">活動実績</router-link>
+          <router-link to="/about" class="link" id="cursor-about">EATOPとは</router-link>
+          <router-link to="/event" class="link" id="cursor-event">イベント情報</router-link>
+          <router-link to="/logs" class="link" id="cursor-logs">活動実績</router-link>
           <a href="https://lin.ee/1QVJQLx"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" id="line"></a>
         </nav>
       </header>
@@ -114,6 +114,18 @@ nav {
   height: 30px;
   padding-top: 13px;
   cursor: url(./app/line_brown.png), auto;
+}
+
+#cursor-about {
+  cursor: url(./app/about_meat.png), auto;
+}
+
+#cursor-event {
+cursor: url(./app/event_vegit.png), auto;
+}
+
+#cursor-logs {
+  cursor: url(./app/logs_fish.png), auto;
 }
 
 footer {

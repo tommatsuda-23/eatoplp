@@ -6,8 +6,6 @@ import about from '@/views/about'
 import event from '@/views/event'
 import logs from '@/views/logs'
 
-import post from '@/components/post'
-
 Vue.use(Router)
 
 export default new Router({

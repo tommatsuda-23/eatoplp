@@ -46,7 +46,7 @@
       </section>
       <section id="event">
         <div class="container">
-          <button @click="toEvent" class="btn">もっと詳しく</button>
+          <button @click="toEvent" class="btn" id="cursor-event">もっと詳しく</button>
         </div>
       </section>
       <section id="logs">
@@ -242,6 +242,10 @@ body {
 
 #cursor-about {
   cursor: url(../assets/images/top/cursor/about_meat.png), auto;
+}
+
+#cursor-event {
+  cursor: url(../assets/images/top/cursor/event_vegit.png), auto;
 }
 
 #cursor-logs {

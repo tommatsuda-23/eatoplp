@@ -18,7 +18,9 @@
 
 <script>
 export default {
-
+  props: {
+    color: {}
+  }
 }
 </script>
 

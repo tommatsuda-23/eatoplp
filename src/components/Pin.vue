@@ -1,13 +1,13 @@
 <template>
   <div>
-      <img v-bind="{ src: imgSrc, style: coordinate, alt: imgAlt }">
+      <img v-bind="{ src: pinImg, style: coordinate, alt: imgAlt }">
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    imgSrc: {},
+    pinImg: {},
     position: {
       required: true,
       default: [0, 0]
