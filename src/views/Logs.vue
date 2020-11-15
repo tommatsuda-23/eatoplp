@@ -12,9 +12,10 @@
             <div id="show-modal" :key=key @click="showModal = true">
               <Pin :key=key v-bind="{ pinImg: prop['pinImg'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
             </div>
-            <Post :key=key v-if="showModal" @close="showModal = false">
+            <!-- eslint-disable-next-line vue/valid-v-for -->
+            <Post v-if="showModal" @close="showModal = false">
               <template v-slot:title>
-                <h2></h2>
+                <h2>{{ prop['imgAlt'] }}</h2>
               </template>
               <template v-slot:contents>
                 <img src="" alt="">
@@ -48,7 +49,7 @@ export default {
         },
         {pinImg: require('../assets/images/logs/pins/hiho.png'),
           position: [39, 57],
-          imgAlt: 'ハイホー',
+          imgAlt: '前原町の居酒屋Hihoの運営',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/imari.png'),
@@ -58,17 +59,17 @@ export default {
         },
         {pinImg: require('../assets/images/logs/pins/kyudaisai.png'),
           position: [50, 24],
-          imgAlt: '九大祭',
+          imgAlt: '九大祭出店  いーとっぷカレー',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/pietro.png'),
           position: [86, 70],
-          imgAlt: 'ピエトロ',
+          imgAlt: 'ピエトロ共同商品開発',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/qshock.png'),
           position: [42, 60],
-          imgAlt: 'Q-SHOCK',
+          imgAlt: 'Q-SHOCK  中学生 & 留学生と英語でランチ',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/sabameshi.png'),
@@ -78,12 +79,12 @@ export default {
         },
         {pinImg: require('../assets/images/logs/pins/saito.png'),
           position: [68, 47],
-          imgAlt: 'さいとぴあバレンタイン',
+          imgAlt: 'バレンタインお菓子づくり in さいとぴあ',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/saitorensai.png'),
           position: [66, 43],
-          imgAlt: '西都連祭',
+          imgAlt: '西都連祭出店  いーとっぷカレー',
           color: '#c1e396'
         },
         {pinImg: require('../assets/images/logs/pins/tofu.png'),
@@ -93,7 +94,7 @@ export default {
         },
         {pinImg: require('../assets/images/logs/pins/kendo.png'),
           position: [60, 30],
-          imgAlt: '留学生の剣道体験',
+          imgAlt: '留学生の剣道 & 和食体験',
           color: '#c1e396'
         }
       ],
@@ -128,7 +129,7 @@ export default {
 }
 @media (min-width: 840px) {
   #logs {
-    height: 800px;
+    height: 1000px;
   }
 }
 
@@ -168,7 +169,6 @@ button {
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: contain;
-  box-shadow: inset 0 0 5px 5px #fff5f1;
   position: relative;
 }
 

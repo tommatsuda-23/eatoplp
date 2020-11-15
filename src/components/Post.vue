@@ -1,6 +1,6 @@
 <template>
   <transition name="modal">
-    <div class="modal-mask">
+    <div class="modal-mask" :style="colorStyle">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
@@ -20,6 +20,13 @@
 export default {
   props: {
     color: {}
+  },
+  computed: {
+    colorStyle () {
+      return {
+        '--color': this.color
+      }
+    }
   }
 }
 </script>
@@ -68,7 +75,7 @@ export default {
 
 .modal-header h3 {
   margin-top: 0;
-  color: #42b983;
+  color: var(--color);
 }
 
 .modal-body {

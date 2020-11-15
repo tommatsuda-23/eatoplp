@@ -32,7 +32,7 @@
           <h1>田中  稀ひろ<span> KIHIRO TANAKA</span></h1>
           <p>2代目代表、共創学部3年
           <br>アットホームで居心地のいい空間作りのできるEATOPの仲間と活動を誇りに思っています。
-          <br>今年は新型コロナウイルス感染症拡大の影響で、思うように活動ができていない面も多いですが、今後もこの活動を広げていくために代表を務め上げたいです！</p>
+          今年は新型コロナウイルス感染症拡大の影響で、思うように活動ができていない面も多いですが、今後もこの活動を広げていくために代表を務め上げたいです！</p>
         </div>
         <div id="tanaka-right">
           <img src="../assets/images/about/tanaka.png" alt="田中 稀ひろ">
@@ -158,9 +158,9 @@ body {
 
 #tanaka {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 50px 0 150px;
+  padding: 0 50px 0 100px;
 }
 
 #tanaka-left {
@@ -169,6 +169,7 @@ body {
 
 #tanaka-left > p {
   font-size: 15px;
+  padding-right: 20px;
 }
 
 #tanaka-right > img {
@@ -177,9 +178,9 @@ body {
 
 #sasazu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 150px 0 50px;
+  padding: 0 100px 0 50px;
 }
 
 #sasazu-left > img {
