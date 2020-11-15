@@ -99,12 +99,10 @@ header {
   color: black;
   padding: 20px 15px;
   display: inline-block;
-  transition: all .2s;
 }
 
 .link:hover {
-  background-color: #fde8df;
-  box-shadow: inset 0 0 4px 2px #fff5f1;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 190, 190, 0.3) 0%, rgba(255, 190, 190, 0.2) 58%, rgba(255, 190, 190, 0) 100%);
 }
 
 nav {

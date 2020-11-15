@@ -1,12 +1,18 @@
 <template>
   <div id="logs">
     <transition name="fade" mode="out-in">
-      <div id="map">
-        <template v-for="(prop, key) in pinProps">
-          <router-link :key="key" to="">
-            <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
-          </router-link>
-        </template>
+      <div>
+        <div id="title">
+          <h1>EATOP活動マップ</h1>
+          <p>これまでEATOPが行ってきた活動のうちいくつかを紹介しています</p>
+        </div>
+        <div id="map">
+          <template v-for="(prop, key) in pinProps">
+            <router-link :key="key" to="">
+              <Pin :key="key" v-bind="{ imgSrc: prop['imgSrc'], position: prop['position'], imgAlt: prop['imgAlt']}"/>
+            </router-link>
+          </template>
+        </div>
       </div>
     </transition>
     <div class="modal">
@@ -57,6 +63,26 @@ export default {
   font-family: 'Nasu';
   font-weight: normal;
   margin: 0;
+}
+
+#title {
+  text-align: center;
+  padding: 40px 0;
+  margin: 0;
+}
+
+#title > h1 {
+  margin-bottom: 10px;
+}
+
+#title > p {
+  color: rgba(0,0,0,0.8);
+}
+
+#title > h1::before,
+#title > h1::after {
+  content: '～';
+  font-size: 25px;
 }
 
 #map {

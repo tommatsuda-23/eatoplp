@@ -109,7 +109,7 @@ p {
 }
 
 .comment {
-  padding: 0 15px;
+  padding: 15px;
 }
 
 span {
