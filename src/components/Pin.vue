@@ -21,6 +21,11 @@ export default {
         '--y': this.position[1] * 0.51 + '%'
       }
     }
+  },
+  methods: {
+    toPost: {
+      
+    }
   }
 }
 </script>

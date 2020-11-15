@@ -33,14 +33,14 @@ export default new Router({
       name: 'logs',
       component: logs,
       children: [{
-        path: '/:id',
+        path: '/post/:id',
         component: log
       }]
-    },
-    {
-      path: '*',
-      redirect: '/'
     }
+    // ,{
+    //   path: '*',
+    //   redirect: '/'
+    // }
   ],
   scrollBehavior (to, from, savedPosition) {
     const position = savedPosition || { x: 0, y: 0 }
