@@ -23,16 +23,16 @@ export default {
   data () {
     return {
       pinProps: [
-        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 50], imgAlt: '糸島グルメグランプリ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [20, 20], imgAlt: 'ハイホー', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [50, 50], imgAlt: '伊万里田植え体験', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 50], imgAlt: '九大祭', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [50, 80], imgAlt: 'ピエトロ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [50, 50], imgAlt: 'Q-SHOCK', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/gurugura.png'), position: [30, 35], imgAlt: '糸島グルメグランプリ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/hiho.png'), position: [39, 57], imgAlt: 'ハイホー', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/imari.png'), position: [8, 25], imgAlt: '伊万里田植え体験', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/kyudaisai.png'), position: [50, 24], imgAlt: '九大祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/pietro.png'), position: [86, 65], imgAlt: 'ピエトロ', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/qshock.png'), position: [42, 60], imgAlt: 'Q-SHOCK', link: ''},
         {imgSrc: require('../assets/images/logs/pins/sabameshi.png'), position: [50, 50], imgAlt: 'サバイバル飯キャンプ', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [50, 50], imgAlt: 'さいとぴあバレンタイン', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [50, 50], imgAlt: '西都連祭', link: ''},
-        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [50, 50], imgAlt: 'またいちの塩で豆腐作り', link: ''}
+        {imgSrc: require('../assets/images/logs/pins/saito.png'), position: [68, 47], imgAlt: 'さいとぴあバレンタイン', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/saitorensai.png'), position: [66, 43], imgAlt: '西都連祭', link: ''},
+        {imgSrc: require('../assets/images/logs/pins/tofu.png'), position: [53, 18], imgAlt: 'またいちの塩で豆腐作り', link: ''}
       ]
     }
   },
