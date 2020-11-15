@@ -3,9 +3,10 @@
     <transition name="fade">
       <div id="about-mv"></div>
     </transition>
-    <section id="introduction">
-      <h1 id="about-title">共に作り、共に食べる</h1>
-      <div id="description">
+    <div>
+     <br><br>
+     <h1 id="about-title">共に作り、共に食べる</h1>
+     <div id="description">
         <h3>EATOPの目的</h3>
         <p>ライフスタイルの急激な変化で<br>かつての「誰かとご飯を食べる」という＜共食＞の概念はくずれ、
         <br>一人でご飯を食べる＜孤食＞が広まりつつあります。
@@ -21,7 +22,12 @@
         <br>「食べる」というコミュニケーションを通して紡ぎ出す物語を楽しみに
         <br>EATOPは活動しています。</p>
         <br>
-        <p>「糸島」は豊かな食の宝庫。<br>この場所にあるものの「価値」を存分に生かして。<br>普段あまり交わらないもの同士。<br>美味しい食事を、みんなで美しく作って、食べる。</p>
+        <p>「糸島」は豊かな食の宝庫。<br>この場所にあるものの「価値」を存分に生かして。<br>普段あまり交わらないもの同士。<br>美味しい食事を、みんなで美しく作って、食べる。</p>     </div>
+     <div id="tanaka">
+      <div id="tanaka-left">
+        <h2>代表</h2>
+        <h1>田中  稀ひろ<span> KIHIRO TANAKA</span></h1>
+        <p>2代目代表、共創学部3年<br>アットホームで居心地のいい空間作りのできるEATOPの仲間と活動を誇りに思ってます！<br>今年はコロナの影響で思うように活動ができていない面も多いですが、今後もこの活動を広げていくために代表を務め上げたいです！</p>
       </div>
     </section>
     <section id="members">
@@ -65,10 +71,36 @@
           <p>{{ kingo }}</p>
         </div>
       </div>
-    </section>
-    <section>
-      <h2>パートナー</h2>
-    </section>
+     </div>
+     <div>
+       <h1 id="title">参加者の声</h1>
+     </div>
+     <div id="voice">
+       <div class="participant">
+        <img src="../assets/images/about/participant1.png" alt="地域の方々">
+        <h2>地域の方々</h2>
+        <p>日本の学生や海外からの留学生に農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、若者との接点もできて、いいことばかりです。</p>
+       </div>
+       <div class="participant">
+        <img src="../assets/images/about/participant2.png" alt="地域の方々">
+        <h2>大学生</h2>
+        <p>大人数でご飯を囲むので、餃子や鍋など、一人暮らしだとなかなか食べることがない料理を食べる機会ができます！なにより、みんなで食べるご飯は美味しい！</p>
+       </div>
+       <div class="participant">
+        <img src="../assets/images/about/participant3.png" alt="地域の方々">
+        <h2>留学生</h2>
+        <p>イベントの中で日本人と、日本の食文化のことだけでなく、自分の国の料理についても話せる。食文化以外の色々な体験ができるのも嬉しい！</p>
+       </div>
+     </div>
+     <div>
+       <h1 id="title">パートナー</h1>
+     </div>
+     <div id="partner">
+       <p>Coming Soon !!</p>
+       <p>Coming Soon !!</p>
+       <p>Coming Soon !!</p>
+     </div>
+    </div>
   </div>
 </template>
 
@@ -160,6 +192,10 @@ body {
   width: 50%;
 }
 
+#tanaka-left > p {
+  font-size: 15px;
+}
+
 #tanaka-right > img {
   width: 100%;
 }
@@ -177,6 +213,10 @@ body {
 
 #sasazu-right {
   width: 50%;
+}
+
+#sasazu-right > p {
+  font-size: 15px;
 }
 
 span {
@@ -213,8 +253,19 @@ span {
   margin-bottom: 10px;
 }
 
-#partner {
-  display: flex;
-  justify-content: center;
+.participant > p {
+  font-size: 15px;
+  text-align: center;
 }
+
+#partner {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#partner > p {
+  font-size: 2em;
+}
+
 </style>
