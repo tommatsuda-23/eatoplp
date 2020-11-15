@@ -5,7 +5,7 @@
       <h4>{{ title }}</h4>
       <p>{{ info }}</p>
     </div>
-    <p v-html="comment" id="comment"></p>
+    <slot></slot>
   </div>
 </template>
 
@@ -108,8 +108,12 @@ p {
   padding-right: 15px;
 }
 
-#comment {
+.comment {
   padding: 0 15px;
+}
+
+span {
+  background: linear-gradient(transparent 70%, var(--color) 90%)
 }
 
 @media (max-width: 1100px) {

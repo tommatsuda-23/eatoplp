@@ -24,15 +24,21 @@
             <h3>参加者の声</h3>
             <div class="voice">
               <img src="../assets/images/top/participants/farmer.png" alt="参加者">
-              <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり" comment='日本の学生や海外からの留学生に農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、<span style="background-color: #fff;">若者との接点</span>もできて、いいことばかりです。'/>
+              <balloon info="農家 60代" bgColor="#c1e396" title="若者との大事なつながり">
+                <p class="comment">日本の学生や海外からの留学生に農作業体験をしてもらい、お礼に料理を振る舞っています。作業も楽になるし、<span>若者との接点もできて</span>、いいことばかりです。</p>
+              </balloon>
             </div>
             <div class="voice" id="voiceSecond">
               <img src="../assets/images/top/participants/student.png" alt="参加者">
-              <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！" comment='大人数でご飯を囲むので、餃子や鍋など、一人暮らしだとなかなか食べることがない料理を食べる機会ができます！なにより、<span class="highlight">みんなで食べるご飯は美味しい！</span>' />
+              <balloon info="大学生 20代" bgColor="#ffc1ae" direction="true" title="色んな料理が食べられる！">
+                <p class="comment">大人数でご飯を囲むので、餃子や鍋など、一人暮らしだとなかなか食べることがない料理を食べる機会ができます！なにより、<span>みんなで食べるご飯は美味しい！</span></p>
+              </balloon>
             </div>
             <div class="voice">
               <img src="../assets/images/top/participants/foreignStudent.png" alt="参加者">
-              <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる" comment='イベントの中で日本人と、日本の食文化のことだけでなく、自分の国の料理についても話せる。食文化以外の色々な体験ができるのも嬉しい！' />
+              <balloon info="留学生 20代" bgColor=" #b5d2ff" title="日本の文化の体験ができる">
+                <p class="comment">イベントの中で日本人と、日本の食文化のことだけでなく、自分の国の料理についても話せる。<span>食文化以外の色々な体験</span>ができるのも嬉しい！</p>
+              </balloon>
             </div>
           </div>
           <button @click="toAbout" class="btn" id="cursor-about">もっと詳しく</button>
