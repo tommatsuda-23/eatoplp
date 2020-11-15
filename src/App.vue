@@ -97,8 +97,14 @@ header {
 .link {
   text-decoration: none;
   color: black;
-  padding: 15px;
+  padding: 20px 15px;
   display: inline-block;
+  transition: all .2s;
+}
+
+.link:hover {
+  background-color: #fde8df;
+  box-shadow: inset 0 0 4px 2px #fff5f1;
 }
 
 nav {

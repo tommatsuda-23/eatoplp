@@ -208,7 +208,7 @@ body {
 }
 
 .btn {
-  background-color: #ffccccb0;
+  background-color: #ffccccb9;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px 0;
   width: 251px;
@@ -217,6 +217,17 @@ body {
   border-radius: 25px;
   font-size: 20px;
   color: white;
+  transition: all .2s;
+}
+
+.btn:hover {
+  background-color: #ffc5c5;
+}
+
+.btn:active {
+  background-color: #ffc5c5;
+  margin-left: 4px;
+  box-shadow: none;
 }
 
 #event {
